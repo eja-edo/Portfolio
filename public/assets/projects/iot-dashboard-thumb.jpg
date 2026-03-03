@@ -1,0 +1,11 @@
+<!-- Placeholder project thumbnail -->
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#8b5cf6"/>
+  <rect x="50" y="50" width="700" height="400" fill="#1e1b4b" rx="8"/>
+  <circle cx="150" cy="150" r="40" fill="#a78bfa"/>
+  <circle cx="280" cy="200" r="35" fill="#c4b5fd"/>
+  <circle cx="420" cy="180" r="45" fill="#a78bfa"/>
+  <circle cx="550" cy="220" r="38" fill="#c4b5fd"/>
+  <rect x="70" y="300" width="660" height="120" fill="#312e81" rx="4"/>
+  <text x="400" y="520" font-family="Arial" font-size="32" fill="#fff" text-anchor="middle" font-weight="bold">IoT Dashboard</text>
+</svg>

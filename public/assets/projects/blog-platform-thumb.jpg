@@ -1,0 +1,12 @@
+<!-- Placeholder project thumbnail -->
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#ec4899"/>
+  <rect x="50" y="50" width="700" height="400" fill="#fff" rx="8"/>
+  <rect x="70" y="70" width="300" height="30" fill="#f1f5f9" rx="4"/>
+  <rect x="70" y="120" width="660" height="40" fill="#fce7f3" rx="4"/>
+  <rect x="70" y="180" width="660" height="40" fill="#fce7f3" rx="4"/>
+  <rect x="70" y="240" width="660" height="40" fill="#fce7f3" rx="4"/>
+  <rect x="70" y="300" width="660" height="40" fill="#fce7f3" rx="4"/>
+  <circle cx="650" cy="380" r="30" fill="#ec4899"/>
+  <text x="400" y="520" font-family="Arial" font-size="32" fill="#fff" text-anchor="middle" font-weight="bold">AI Blog Platform</text>
+</svg>

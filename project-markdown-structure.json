@@ -1,0 +1,622 @@
+{
+    "guide": {
+        "title": "Hướng Dẫn Cấu Trúc File Markdown cho Projects",
+        "version": "1.0",
+        "lastUpdated": "2024-11-20",
+        "fileStructure": {
+            "description": "File Markdown project gồm 2 phần chính",
+            "parts": [
+                {
+                    "name": "Front Matter (Header)",
+                    "type": "YAML Metadata",
+                    "position": "Đầu file",
+                    "delimiter": "---"
+                },
+                {
+                    "name": "Content (Nội dung)",
+                    "type": "Markdown content",
+                    "position": "Sau Front Matter",
+                    "includes": [
+                        "Heading",
+                        "Text",
+                        "Code",
+                        "Images"
+                    ]
+                }
+            ]
+        },
+        "frontMatter": {
+            "description": "Thông tin cơ bản về project, được bọc trong 2 dấu ---",
+            "syntax": {
+                "opening": "---",
+                "closing": "---",
+                "format": "YAML"
+            },
+            "requiredFields": [
+                {
+                    "field": "title",
+                    "type": "string",
+                    "description": "Tên project (dùng quotes)",
+                    "example": "\"E-commerce Platform\"",
+                    "rules": [
+                        "Phải có dấu ngoặc kép",
+                        "Tên hấp dẫn, mô tả chức năng"
+                    ]
+                },
+                {
+                    "field": "date",
+                    "type": "string",
+                    "description": "Ngày tạo (ISO format)",
+                    "format": "YYYY-MM-DD",
+                    "example": "\"2024-09-20\"",
+                    "rules": [
+                        "Định dạng ISO: Năm-Tháng-Ngày",
+                        "Phải có dấu ngoặc kép"
+                    ]
+                },
+                {
+                    "field": "tags",
+                    "type": "array",
+                    "description": "Công nghệ sử dụng",
+                    "example": "[\"React\", \"Node.js\", \"MongoDB\"]",
+                    "rules": [
+                        "Phải là mảng",
+                        "Mỗi tag viết hoa chữ cái đầu",
+                        "Liệt kê công nghệ chính"
+                    ]
+                },
+                {
+                    "field": "excerpt",
+                    "type": "string",
+                    "description": "Mô tả ngắn (1-2 câu)",
+                    "length": "100-200 characters",
+                    "example": "\"A modern shopping platform with AI recommendations\"",
+                    "rules": [
+                        "Ngắn gọn, súc tích",
+                        "Nêu rõ giá trị của project"
+                    ]
+                }
+            ],
+            "optionalFields": [
+                {
+                    "field": "thumb",
+                    "type": "array",
+                    "description": "Danh sách hình ảnh thumbnail",
+                    "maxItems": 3,
+                    "example": [
+                        "\"path/to/image1.jpg\"",
+                        "\"path/to/image2.jpg\""
+                    ],
+                    "rules": [
+                        "Đường dẫn phải hợp lệ",
+                        "Tối đa 2-3 ảnh",
+                        "Ảnh chất lượng cao"
+                    ]
+                },
+                {
+                    "field": "demo",
+                    "type": "string",
+                    "description": "Link demo/preview",
+                    "example": "\"https://demo-url.com\"",
+                    "rules": [
+                        "URL hợp lệ",
+                        "Link phải hoạt động"
+                    ]
+                },
+                {
+                    "field": "repo",
+                    "type": "string",
+                    "description": "Link GitHub repository",
+                    "example": "\"https://github.com/user/repo\"",
+                    "rules": [
+                        "URL hợp lệ",
+                        "Link phải hoạt động"
+                    ]
+                },
+                {
+                    "field": "roles",
+                    "type": "array",
+                    "description": "Vai trò trong project",
+                    "example": "[\"Full-Stack Developer\", \"UI/UX Designer\"]"
+                },
+                {
+                    "field": "featured",
+                    "type": "boolean",
+                    "description": "Hiển thị ở trang chủ",
+                    "values": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "field": "status",
+                    "type": "string",
+                    "description": "Trạng thái project",
+                    "values": [
+                        "completed",
+                        "in-progress",
+                        "archived"
+                    ]
+                },
+                {
+                    "field": "client",
+                    "type": "string",
+                    "description": "Tên client (nếu có)",
+                    "example": "\"Company Name\""
+                },
+                {
+                    "field": "duration",
+                    "type": "string",
+                    "description": "Thời gian thực hiện",
+                    "example": "\"3 months\""
+                }
+            ],
+            "rules": {
+                "mustDo": [
+                    "Đặt front matter ở dòng đầu tiên của file",
+                    "Sử dụng dấu ngoặc kép \"...\" cho string values",
+                    "Format date theo chuẩn YYYY-MM-DD",
+                    "Tags phải là mảng, mỗi tag viết hoa chữ cái đầu",
+                    "Đường dẫn thumb/demo/repo phải là URL hợp lệ"
+                ],
+                "mustNotDo": [
+                    "Bỏ dấu --- mở đầu và kết thúc",
+                    "Dùng tab indent (dùng spaces)",
+                    "Để trống các trường bắt buộc",
+                    "Viết sai cú pháp YAML"
+                ]
+            }
+        },
+        "contentStructure": {
+            "description": "Cấu trúc nội dung khuyến nghị cho project",
+            "recommendedSections": [
+                {
+                    "order": 1,
+                    "title": "Giới thiệu Dự án",
+                    "icon": "🎯",
+                    "purpose": "Tạo ấn tượng đầu tiên mạnh mẽ",
+                    "mustHave": [
+                        "Tiêu đề dự án hấp dẫn",
+                        "Mô tả tổng quan (2-3 câu)",
+                        "Vai trò của bạn",
+                        "Thời gian thực hiện"
+                    ],
+                    "questions": [
+                        "Dự án giải quyết vấn đề gì?",
+                        "Đối tượng sử dụng là ai?",
+                        "Điểm khác biệt là gì?"
+                    ]
+                },
+                {
+                    "order": 2,
+                    "title": "Bối cảnh & Lý do Phát triển",
+                    "icon": "💡",
+                    "purpose": "Kể câu chuyện đằng sau dự án",
+                    "mustHave": [
+                        "Vấn đề thực tế",
+                        "Mục tiêu dự án",
+                        "Ý nghĩa cá nhân"
+                    ],
+                    "style": "Tạo kết nối cảm xúc với người đọc"
+                },
+                {
+                    "order": 3,
+                    "title": "Công nghệ & Kiến trúc Hệ thống",
+                    "icon": "🛠️",
+                    "purpose": "Thể hiện khả năng kỹ thuật",
+                    "mustHave": [
+                        "Stack công nghệ chính",
+                        "Kiến trúc tổng quan (diagram)",
+                        "Lý do chọn công nghệ"
+                    ],
+                    "presentation": [
+                        "Sử dụng icons/badges cho công nghệ",
+                        "Vẽ sơ đồ với Mermaid",
+                        "Giải thích ngắn gọn luồng hoạt động"
+                    ]
+                },
+                {
+                    "order": 4,
+                    "title": "Tính năng Nổi bật",
+                    "icon": "✨",
+                    "purpose": "Làm nổi bật giá trị người dùng",
+                    "mustHave": [
+                        "Tính năng cho người dùng cuối",
+                        "Tính năng cho quản trị",
+                        "Tính năng kỹ thuật đặc biệt"
+                    ],
+                    "style": "Focus vào lợi ích, không chỉ liệt kê"
+                },
+                {
+                    "order": 5,
+                    "title": "Kết quả & Tác động",
+                    "icon": "📊",
+                    "purpose": "Chứng minh giá trị thực",
+                    "mustHave": [
+                        "Số liệu cụ thể",
+                        "Phản hồi người dùng",
+                        "Giá trị mang lại"
+                    ],
+                    "metrics": [
+                        "Người dùng hoạt động",
+                        "Hiệu năng",
+                        "Tỷ lệ chuyển đổi",
+                        "Doanh thu/tiết kiệm"
+                    ]
+                },
+                {
+                    "order": 6,
+                    "title": "Thách thức & Giải pháp",
+                    "icon": "🚧",
+                    "purpose": "Thể hiện khả năng giải quyết vấn đề",
+                    "structure": {
+                        "problem": "Mô tả vấn đề cụ thể",
+                        "solution": "Các bước giải quyết",
+                        "result": "Kết quả đạt được"
+                    },
+                    "mustHave": [
+                        "2-3 thách thức chính",
+                        "Giải pháp kỹ thuật cụ thể",
+                        "Metrics chứng minh hiệu quả"
+                    ]
+                },
+                {
+                    "order": 7,
+                    "title": "Bài học & Phát triển Cá nhân",
+                    "icon": "💪",
+                    "purpose": "Cho thấy sự trưởng thành",
+                    "mustHave": [
+                        "Kỹ năng kỹ thuật học được",
+                        "Kỹ năng mềm phát triển",
+                        "Insight quan trọng nhất"
+                    ],
+                    "categories": [
+                        "Technical skills",
+                        "Soft skills",
+                        "Key learnings"
+                    ]
+                },
+                {
+                    "order": 8,
+                    "title": "Demo Trực quan",
+                    "icon": "🖼️",
+                    "purpose": "Hình ảnh nói lên nhiều hơn ngàn lời",
+                    "mustHave": [
+                        "Screenshots chất lượng cao",
+                        "Video demo ngắn (30-60s)",
+                        "Live demo link"
+                    ],
+                    "types": [
+                        "Trang chủ",
+                        "Trang chi tiết",
+                        "Admin dashboard",
+                        "Mobile view"
+                    ]
+                },
+                {
+                    "order": 9,
+                    "title": "Kế hoạch Tương lai",
+                    "icon": "🚀",
+                    "purpose": "Cho thấy tầm nhìn dài hạn",
+                    "mustHave": [
+                        "Tính năng ngắn hạn (1-3 tháng)",
+                        "Tính năng dài hạn (3-6 tháng)",
+                        "Cải thiện kỹ thuật"
+                    ]
+                }
+            ]
+        },
+        "markdownSyntax": {
+            "headings": {
+                "rules": [
+                    "Có dấu cách giữa # và text",
+                    "Không skip level (H2 → H3, không H2 → H4)",
+                    "Tối đa nên dùng đến H4"
+                ],
+                "levels": [
+                    {
+                        "level": "H1",
+                        "syntax": "# Heading",
+                        "usage": "Tiêu đề chính (chỉ dùng 1 lần)"
+                    },
+                    {
+                        "level": "H2",
+                        "syntax": "## Heading",
+                        "usage": "Các section chính"
+                    },
+                    {
+                        "level": "H3",
+                        "syntax": "### Heading",
+                        "usage": "Sub-sections"
+                    },
+                    {
+                        "level": "H4",
+                        "syntax": "#### Heading",
+                        "usage": "Chi tiết trong sub-section"
+                    }
+                ]
+            },
+            "textFormatting": [
+                {
+                    "name": "Bold",
+                    "syntax": "**text**",
+                    "usage": "Nhấn mạnh quan trọng"
+                },
+                {
+                    "name": "Italic",
+                    "syntax": "*text*",
+                    "usage": "Nhấn mạnh nhẹ"
+                },
+                {
+                    "name": "Inline Code",
+                    "syntax": "`code`",
+                    "usage": "Code, biến, function names"
+                },
+                {
+                    "name": "Strikethrough",
+                    "syntax": "~~text~~",
+                    "usage": "Nội dung bị loại bỏ"
+                },
+                {
+                    "name": "Link",
+                    "syntax": "[text](URL)",
+                    "usage": "Liên kết"
+                },
+                {
+                    "name": "Image",
+                    "syntax": "![alt](url)",
+                    "usage": "Hình ảnh"
+                }
+            ],
+            "lists": {
+                "unordered": {
+                    "syntax": "- Item",
+                    "example": "- Item 1\n- Item 2\n  - Sub-item 2.1"
+                },
+                "ordered": {
+                    "syntax": "1. Item",
+                    "example": "1. First\n2. Second\n3. Third"
+                },
+                "tasks": {
+                    "syntax": "- [ ] Task / - [x] Done",
+                    "example": "- [x] Completed\n- [ ] Pending"
+                }
+            },
+            "codeBlocks": {
+                "inline": {
+                    "syntax": "`code`",
+                    "example": "Use the `useState` hook"
+                },
+                "block": {
+                    "syntax": "```language\ncode\n```",
+                    "example": "```javascript\nconst x = 1;\n```",
+                    "rules": [
+                        "Luôn chỉ định ngôn ngữ",
+                        "Indent code đúng cách",
+                        "Giữ ngắn gọn (< 30 dòng)",
+                        "Thêm comments giải thích"
+                    ],
+                    "languages": [
+                        "javascript",
+                        "typescript",
+                        "python",
+                        "bash",
+                        "yaml",
+                        "sql",
+                        "json"
+                    ]
+                }
+            }
+        },
+        "mdxComponents": {
+            "callout": {
+                "description": "Hộp thông báo cho thông tin quan trọng",
+                "syntax": "<Callout type=\"{type}\" title=\"{title}\">\n{content}\n</Callout>",
+                "types": [
+                    "info",
+                    "warning",
+                    "success",
+                    "error"
+                ],
+                "examples": [
+                    {
+                        "type": "info",
+                        "usage": "Thông tin bổ sung",
+                        "example": "<Callout type=\"info\">\n**Thông tin:** Đây là thông tin hữu ích.\n</Callout>"
+                    },
+                    {
+                        "type": "warning",
+                        "usage": "Cảnh báo quan trọng",
+                        "example": "<Callout type=\"warning\" title=\"Cảnh báo\">\nCần chú ý điểm này!\n</Callout>"
+                    }
+                ]
+            },
+            "mdxImage": {
+                "description": "Component hình ảnh nâng cao",
+                "syntax": "<MDXImage\n  src=\"{path}\"\n  alt=\"{description}\"\n  caption=\"{caption}\"\n  priority={boolean}\n/>",
+                "props": {
+                    "src": "Đường dẫn hình ảnh",
+                    "alt": "Mô tả hình ảnh (bắt buộc)",
+                    "caption": "Chú thích hiển thị",
+                    "priority": "Ưu tiên load (true/false)"
+                }
+            },
+            "imageCarousel": {
+                "description": "Carousel nhiều hình ảnh",
+                "syntax": "<ImageCarousel\n  images={[\n    { src: \"path1\", alt: \"desc1\" },\n    { src: \"path2\", alt: \"desc2\" }\n  ]}\n  caption=\"{caption}\"\n/>",
+                "usage": "Hiển thị nhiều ảnh liên quan"
+            },
+            "mdxVideo": {
+                "description": "Component video",
+                "syntax": "<MDXVideo\n  src=\"{path}\"\n  caption=\"{caption}\"\n  autoplay={boolean}\n/>",
+                "props": {
+                    "src": "Đường dẫn video",
+                    "caption": "Chú thích video",
+                    "autoplay": "Tự động phát (true/false)"
+                }
+            },
+            "mermaid": {
+                "description": "Vẽ sơ đồ chuyên nghiệp",
+                "syntax": "<Mermaid chart={`\n{diagram code}\n`} />",
+                "importance": "QUAN TRỌNG: Dùng Mermaid thay vì ASCII art",
+                "types": [
+                    {
+                        "name": "Flowchart",
+                        "code": "graph TB/LR",
+                        "usage": "Kiến trúc hệ thống, data flow",
+                        "example": "graph TB\n    A[Start] --> B[Process]\n    B --> C[End]"
+                    },
+                    {
+                        "name": "Sequence Diagram",
+                        "code": "sequenceDiagram",
+                        "usage": "API calls, user interactions",
+                        "example": "sequenceDiagram\n    User->>API: Request\n    API-->>User: Response"
+                    },
+                    {
+                        "name": "ER Diagram",
+                        "code": "erDiagram",
+                        "usage": "Database schema",
+                        "example": "erDiagram\n    USER ||--o{ ORDER : places"
+                    },
+                    {
+                        "name": "Class Diagram",
+                        "code": "classDiagram",
+                        "usage": "OOP structure",
+                        "example": "classDiagram\n    class User {\n        +id\n        +name\n    }"
+                    },
+                    {
+                        "name": "State Diagram",
+                        "code": "stateDiagram-v2",
+                        "usage": "Workflow, state machine",
+                        "example": "stateDiagram-v2\n    [*] --> Active\n    Active --> [*]"
+                    }
+                ],
+                "rules": [
+                    "Luôn dùng component <Mermaid>",
+                    "Wrap code trong backticks",
+                    "Indent đúng cách",
+                    "Giữ đơn giản (< 15 nodes)",
+                    "Chọn loại diagram phù hợp"
+                ]
+            }
+        },
+        "bestPractices": {
+            "mustDo": [
+                {
+                    "category": "Cấu trúc",
+                    "practices": [
+                        "Sử dụng headings hierarchy đúng",
+                        "Có mục lục nếu nội dung dài",
+                        "Phân chia sections hợp lý"
+                    ]
+                },
+                {
+                    "category": "Nội dung",
+                    "practices": [
+                        "Viết mô tả cụ thể, tránh chung chung",
+                        "Cung cấp ví dụ code thực tế",
+                        "Giải thích technical decisions",
+                        "Đề cập challenges và solutions"
+                    ]
+                },
+                {
+                    "category": "Visual elements",
+                    "practices": [
+                        "Thêm screenshots, diagrams",
+                        "Sử dụng callouts cho thông tin quan trọng",
+                        "Code blocks có syntax highlighting"
+                    ]
+                },
+                {
+                    "category": "Links và References",
+                    "practices": [
+                        "Link đến demo, repository",
+                        "Link đến documentation liên quan",
+                        "Đảm bảo links hoạt động"
+                    ]
+                }
+            ],
+            "mustNotDo": [
+                {
+                    "category": "Nội dung",
+                    "avoid": [
+                        "Nội dung quá chung chung",
+                        "Code blocks không có language",
+                        "Images không có alt text",
+                        "Headings không theo thứ tự",
+                        "Quá nhiều buzzwords"
+                    ]
+                },
+                {
+                    "category": "Kỹ thuật",
+                    "avoid": [
+                        "Broken links",
+                        "Images không load",
+                        "Malformed YAML",
+                        "Code syntax errors"
+                    ]
+                },
+                {
+                    "category": "Style",
+                    "avoid": [
+                        "Câu quá dài",
+                        "Dùng quá nhiều emojis",
+                        "Copy-paste code dài không cần thiết",
+                        "Bỏ qua proofreading"
+                    ]
+                }
+            ],
+            "lengthGuidelines": {
+                "excerpt": "100-200 characters",
+                "projectOverview": "2-3 paragraphs",
+                "eachSection": "3-5 paragraphs",
+                "total": "800-2000 words"
+            },
+            "styleGuide": {
+                "tone": [
+                    "Professional nhưng approachable",
+                    "Technical nhưng dễ hiểu",
+                    "Tự tin nhưng không khoe khoang"
+                ],
+                "formatting": [
+                    "Sử dụng bold cho key terms",
+                    "Sử dụng code formatting cho technical terms",
+                    "Break text thành đoạn ngắn (3-5 câu)"
+                ]
+            }
+        },
+        "writingTips": {
+            "shouldDo": [
+                "Viết theo góc nhìn người đọc",
+                "Dùng ngôn ngữ đơn giản",
+                "Kể câu chuyện có bối cảnh",
+                "Số liệu cụ thể hơn mô tả mơ hồ",
+                "Trực quan hóa bằng hình ảnh/sơ đồ",
+                "Thể hiện passion với dự án"
+            ],
+            "shouldAvoid": [
+                "Quá kỹ thuật như API documentation",
+                "Liệt kê vô hồn không giải thích giá trị",
+                "Quá dài dòng (mỗi section 3-5 đoạn)",
+                "Thiếu bằng chứng (demo, số liệu, hình)",
+                "Copy-paste mô tả giống dự án khác",
+                "Khiêm tốn quá mức che giấu thành tựu"
+            ]
+        },
+        "publishChecklist": [
+            "Front matter đầy đủ và đúng format",
+            "Title và excerpt hấp dẫn",
+            "Tags chính xác",
+            "Thumbnails đẹp và load nhanh",
+            "All links hoạt động (demo, repo)",
+            "Code blocks có syntax highlighting",
+            "Images có alt text",
+            "Headings theo đúng hierarchy",
+            "Nội dung đã proofread",
+            "Technical details chính xác",
+            "Có ít nhất 1 diagram/visual",
+            "Có phần challenges & lessons learned",
+            "Có metrics/results nếu có"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+<!-- Placeholder project thumbnail -->
+<!-- Replace with actual project screenshot -->
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#3b82f6"/>
+  <rect x="50" y="50" width="700" height="400" fill="#fff" rx="8"/>
+  <rect x="70" y="70" width="660" height="50" fill="#f1f5f9" rx="4"/>
+  <rect x="70" y="140" width="200" height="200" fill="#e2e8f0" rx="4"/>
+  <rect x="290" y="140" width="440" height="100" fill="#e2e8f0" rx="4"/>
+  <rect x="290" y="260" width="440" height="80" fill="#e2e8f0" rx="4"/>
+  <text x="400" y="520" font-family="Arial" font-size="32" fill="#fff" text-anchor="middle" font-weight="bold">E-commerce Platform</text>
+</svg>

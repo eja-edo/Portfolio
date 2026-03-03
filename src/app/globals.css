@@ -1,0 +1,412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+
+  /* Prose improvements for code blocks */
+  .prose pre {
+    @apply !bg-transparent !rounded-none;
+  }
+
+  .prose code {
+    @apply text-sm;
+  }
+
+  /* Remove default code styling */
+  .prose :where(code):not(:where([class~="not-prose"] *))::before,
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: none;
+  }
+
+  /* Inline code - not inside pre */
+  .prose :where(code):not(:where(pre *)):not(:where([class~="not-prose"] *)) {
+    @apply px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 font-mono text-sm border border-gray-200 dark:border-gray-700;
+  }
+
+  /* rehype-pretty-code styles */
+  .prose pre>code {
+    @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-gray-100;
+    counter-reset: line;
+  }
+
+  .prose pre>code>[data-line] {
+    @apply px-4 py-1;
+  }
+
+  .prose pre>code>[data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+    @apply inline-block w-6 mr-4 text-right text-gray-500;
+  }
+
+  .prose pre>code [data-highlighted-line] {
+    @apply bg-blue-500/10 border-l-2 border-blue-500;
+  }
+
+  .prose pre>code [data-highlighted-chars] {
+    @apply bg-pink-500/20 rounded px-1;
+  }
+
+  /* React Syntax Highlighter enhancements */
+  .not-prose code[class*="language-"],
+  .not-prose pre[class*="language-"] {
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-variant-ligatures: common-ligatures;
+    text-shadow: none !important;
+  }
+
+  /* Line numbers styling */
+  .not-prose .linenumber {
+    @apply select-none;
+    opacity: 0.5;
+  }
+
+  /* Scrollbar for code blocks */
+  .not-prose pre::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .not-prose pre::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+
+  .not-prose pre::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded;
+  }
+
+  .not-prose pre::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+
+  /* Tables styling */
+  .prose table {
+    @apply w-full border-collapse my-6;
+  }
+
+  .prose th {
+    @apply bg-gray-100 dark:bg-gray-800 font-semibold text-left px-4 py-3 border border-gray-300 dark:border-gray-700;
+  }
+
+  .prose td {
+    @apply px-4 py-3 border border-gray-300 dark:border-gray-700;
+  }
+
+  /* Blockquotes */
+  .prose blockquote {
+    @apply border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-950/30 py-2 px-4 my-6 rounded-r-lg italic;
+  }
+
+  /* Mermaid diagrams */
+  .prose .mermaid {
+    @apply flex justify-center items-center my-8 p-4 bg-white dark:bg-gray-900 rounded-lg;
+  }
+
+  .prose .mermaid svg {
+    @apply max-w-full h-auto;
+  }
+
+  /* Anchor headings */
+  .prose .anchor {
+    @apply no-underline hover:underline;
+  }
+
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply scroll-mt-20;
+  }
+}
+
+@layer utilities {
+
+  /* Focus visible styles */
+  .focus-visible:focus {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%);
+    background-size: 1000px 100%;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Floating animation for avatar */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes float-reverse {
+
+    0%,
+    100% {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    50% {
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes glow-pulse {
+
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.3;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-reverse {
+    animation: float-reverse 5s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 4s ease-in-out infinite;
+  }
+
+  /* Bubble floating animations */
+  @keyframes bubble-1 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-10px) translateX(2px);
+    }
+  }
+
+  @keyframes bubble-2 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-8px) translateX(-3px);
+    }
+  }
+
+  @keyframes bubble-3 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-12px) translateX(4px);
+    }
+  }
+
+  @keyframes bubble-4 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-6px) translateX(-2px);
+    }
+  }
+
+  @keyframes bubble-5 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-9px) translateX(3px);
+    }
+  }
+
+  @keyframes bubble-6 {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-5px) translateX(-2px);
+    }
+  }
+
+  .animate-bubble-1 {
+    animation: bubble-1 5s ease-in-out infinite;
+  }
+
+  .animate-bubble-2 {
+    animation: bubble-2 6s ease-in-out infinite;
+  }
+
+  .animate-bubble-3 {
+    animation: bubble-3 7s ease-in-out infinite;
+  }
+
+  .animate-bubble-4 {
+    animation: bubble-4 5.5s ease-in-out infinite;
+  }
+
+  .animate-bubble-5 {
+    animation: bubble-5 6.5s ease-in-out infinite;
+  }
+
+  .animate-bubble-6 {
+    animation: bubble-6 4.5s ease-in-out infinite;
+  }
+
+  /* Infinite scroll animations for tags */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left linear infinite;
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .animate-scroll-left:hover,
+  .animate-scroll-right:hover {
+    animation-play-state: paused;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-blue-200 dark:bg-blue-800 text-gray-900 dark:text-gray-100;
+  }
+}
