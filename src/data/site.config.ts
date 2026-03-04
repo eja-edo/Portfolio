@@ -14,7 +14,7 @@ export const SITE: SiteConfig = {
 
     avatar: 'https://imgproxy.mezon.ai/K0YUZRIosDOcz5lY6qrgC6UIXmQgWzLjZv7VJ1RAA8c/rs:fit:300:300:1/mb:2097152/plain/https://profile.mezon.ai/1946168514767228928/2009178101203865600.jpg@webp',
     email: 'vunguyenduyanh57@gmail.com',
-    resume: '/assets/resume.pdf',
+    resume: '/assets/Vu-Nguyen-Duy-Anh-CV.pdf',
 
     // Social links
     social: {

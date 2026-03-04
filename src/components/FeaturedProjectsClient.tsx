@@ -20,7 +20,7 @@ export function FeaturedProjectsClient({ projects }: FeaturedProjectsClientProps
                         Featured Projects
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                        Khám phá một số dự án nổi bật mà tôi đã thực hiện với công nghệ hiện đại
+                        Explore a selection of notable projects I have built using modern technologies.
                     </p>
                 </ScrollAnimation>
 

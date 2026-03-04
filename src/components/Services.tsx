@@ -1,57 +1,57 @@
 'use client';
 
 import Link from 'next/link';
-import { Code2, Palette, Smartphone, Globe, Database, Zap } from 'lucide-react';
+import { Code2, Palette, Server, Globe, Database, Zap } from 'lucide-react';
 import { ScrollAnimation, StaggerContainer, StaggerItem } from './ScrollAnimation';
 
 const services = [
   {
-    icon: Code2,
-    title: 'Web Development',
-    description: 'Xây dựng website hiện đại với React, Next.js, và các công nghệ tiên tiến nhất',
-    features: ['Responsive Design', 'SEO Optimized', 'Fast Performance'],
-    color: 'from-blue-500 to-cyan-500',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile Development',
-    description: 'Phát triển ứng dụng di động đa nền tảng với React Native và Flutter',
-    features: ['Cross-platform', 'Native Performance', 'Modern UI'],
-    color: 'from-purple-500 to-pink-500',
-    tags: ['React Native', 'Flutter', 'Mobile']
-  },
-  {
-    icon: Palette,
-    title: 'UI/UX Design',
-    description: 'Thiết kế giao diện người dùng đẹp mắt và trải nghiệm người dùng tuyệt vời',
-    features: ['User Research', 'Wireframing', 'Prototyping'],
-    color: 'from-pink-500 to-rose-500',
-    tags: ['UI/UX', 'Design', 'Figma']
-  },
-  {
     icon: Database,
-    title: 'Backend Development',
-    description: 'Xây dựng API và hệ thống backend mạnh mẽ, bảo mật, và có thể mở rộng',
-    features: ['RESTful API', 'Database Design', 'Cloud Integration'],
+    title: 'Backend & API Engineering',
+    description: 'Designing and building production-ready backend systems with scalable, fault-tolerant, and secure architectures.',
+    features: ['REST API Design', 'Authentication & Authorization', 'Scalable Architecture'],
     color: 'from-green-500 to-emerald-500',
-    tags: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL', 'FastAPI']
-  },
-  {
-    icon: Globe,
-    title: 'Full Stack Solutions',
-    description: 'Giải pháp toàn diện từ frontend đến backend, database và deployment',
-    features: ['End-to-end', 'Scalable', 'Maintainable'],
-    color: 'from-orange-500 to-amber-500',
-    tags: ['Next.js', 'Node.js', 'MongoDB', 'React']
+    tags: ['Django', 'Django REST Framework', 'FastAPI', 'Express', 'Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Prisma', 'REST API']
   },
   {
     icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Tối ưu hiệu suất website và ứng dụng để đạt tốc độ tải nhanh nhất',
-    features: ['Code Splitting', 'Lazy Loading', 'Caching Strategy'],
+    title: 'Real-Time Systems & Streaming',
+    description: 'Developing low-latency real-time communication systems, audio/video streaming pipelines, and event-driven architectures.',
+    features: ['WebSocket Communication', 'Live Audio Streaming', 'Message-Driven Architecture'],
     color: 'from-yellow-500 to-orange-500',
-    tags: ['Performance', 'Optimization', 'WebSocket']
+    tags: ['WebSocket', 'Socket.IO', 'Redis', 'Streaming', 'LiveKit', 'Real-time']
+  },
+  {
+    icon: Code2,
+    title: 'AI-Powered Applications',
+    description: 'Integrating and optimizing AI models for production systems, focusing on speech processing and multi-model orchestration.',
+    features: ['Speech-to-Text (STT)', 'Text-to-Speech (TTS)', 'Multi-Model Strategy'],
+    color: 'from-blue-500 to-cyan-500',
+    tags: ['Whisper', 'Vosk', 'Gemini AI', 'Kokoro TTS', 'Python']
+  },
+  {
+    icon: Globe,
+    title: 'IoT & Distributed Systems',
+    description: 'Building IoT platforms and distributed backend systems with real-time monitoring and scalable device communication.',
+    features: ['MQTT Integration', 'Device Communication', 'Distributed Processing'],
+    color: 'from-purple-500 to-indigo-500',
+    tags: ['IoT', 'MQTT', 'Redis', 'Node.js', 'PostgreSQL']
+  },
+  {
+    icon: Server,
+    title: 'Infrastructure & DevOps',
+    description: 'Deploying self-hosted infrastructure optimized for performance, cost efficiency, and observability.',
+    features: ['Containerization', 'Object Storage', 'Production Deployment'],
+    color: 'from-orange-500 to-amber-500',
+    tags: ['Docker', 'MinIO', 'Redis', 'PostgreSQL']
+  },
+  {
+    icon: Palette,
+    title: 'Frontend for System Interfaces',
+    description: 'Building real-time dashboards and admin interfaces for backend, AI, and distributed systems.',
+    features: ['Admin Dashboard', 'Real-Time UI', 'Performance Optimized'],
+    color: 'from-pink-500 to-rose-500',
+    tags: ['React', 'TypeScript', 'Vite', 'TailwindCSS']
   },
 ];
 
@@ -65,7 +65,7 @@ export function Services() {
             Services I Offer
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Dịch vụ chuyên nghiệp với công nghệ hiện đại và kinh nghiệm thực tế
+            Professional services powered by modern technology and real-world experience.
           </p>
         </ScrollAnimation>
 

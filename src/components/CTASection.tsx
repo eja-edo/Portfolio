@@ -25,14 +25,13 @@ export function CTASection() {
         {/* Heading */}
         <ScrollAnimation animation="fadeInUp" delay={0.1}>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Bạn Có Một Dự Án?
+            Have an idea in mind?
           </h2>
         </ScrollAnimation>
 
         <ScrollAnimation animation="fadeInUp" delay={0.2}>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Hãy để tôi giúp bạn biến ý tưởng thành hiện thực.
-            Liên hệ ngay để được tư vấn miễn phí!
+            Let me help you turn your ideas into reality.
           </p>
         </ScrollAnimation>
 
