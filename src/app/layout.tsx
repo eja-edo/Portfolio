@@ -1,8 +1,5 @@
 import { Inter } from 'next/font/google';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { PageTransitionLoader } from '@/components/PageTransitionLoader';
-import { SeasonalEffect } from '@/components/SeasonalEffect';
+import { ClientShell } from '@/components/ClientShell';
 import './globals.css';
 
 const inter = Inter({
@@ -23,13 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans bg-white dark:bg-gray-900 transition-colors`}>
-        <PageTransitionLoader />
-        <SeasonalEffect />
-        <Navbar />
-        <main className="min-h-screen">
+        <ClientShell>
           {children}
-        </main>
-        <Footer />
+        </ClientShell>
       </body>
     </html>
   );

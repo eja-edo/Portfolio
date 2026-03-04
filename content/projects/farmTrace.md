@@ -2,70 +2,70 @@
 title: "Farm Trace Backend - IoT Logistics & Supply Chain Management System"
 date: "2024-12-09"
 tags: ["Node.js", "Express", "Prisma", "PostgreSQL", "Socket.IO", "MQTT", "IoT", "Real-time", "REST API"]
-excerpt: "Hệ thống backend hiện đại cho quản lý chuỗi cung ứng nông sản với IoT tracking, real-time monitoring, và analytics dashboard. Hỗ trợ ESP32 devices, MQTT protocol, và WebSocket streaming."
+excerpt: "Modern backend system for agricultural supply chain management with IoT tracking, real-time monitoring, and analytics dashboard. Supports ESP32 devices, MQTT protocol, and WebSocket streaming."
 thumb: ["/assets/projects/frarm_banner.png"]
 demo: ""
-repo: "https://github.com/your-repo/farm-trace-backend"
+repo: "https://github.com/eja-edo/FarmTrace"
 roles: ["Full-Stack Developer", "IoT System Architect"]
 featured: False
 status: "completed"
 ---
 
-## 🎯 Giới thiệu Dự án
+## 🎯 Project Overview
 
-### Tổng quan
-**Farm Trace Backend** là một hệ thống backend production-ready được xây dựng để quản lý và giám sát chuỗi cung ứng nông sản thông qua mạng lưới thiết bị IoT (ESP32). Hệ thống cung cấp khả năng theo dõi real-time nhiệt độ, độ ẩm, vị trí GPS của hàng hóa trong suốt quá trình vận chuyển, kết hợp với hệ thống cảnh báo tự động và analytics dashboard.
+### Introduction
+**Farm Trace Backend** is a production-ready backend system built to manage and monitor agricultural supply chains through a network of IoT devices (ESP32). The system provides real-time tracking of temperature, humidity, and GPS location of goods throughout the transportation process, combined with an automated alert system and analytics dashboard.
 
-### Vai trò
-- **Backend Developer**: Thiết kế và triển khai REST API architecture
-- **IoT System Architect**: Tích hợp MQTT protocol và WebSocket streaming
-- **DevOps**: Setup Docker containerization và deployment pipeline
+### Role
+- **Backend Developer**: Designed and implemented REST API architecture
+- **IoT System Architect**: Integrated MQTT protocol and WebSocket streaming
+- **DevOps**: Setup Docker containerization and deployment pipeline
 
-### Thời gian thực hiện
-**6 tháng** (Tháng 6/2024 - Tháng 12/2024)
-
----
-
-## 💡 Bối cảnh & Lý do Phát triển
-
-### Vấn đề thực tế
-Trong ngành nông nghiệp và logistics nông sản, việc đảm bảo chất lượng hàng hóa trong quá trình vận chuyển là thách thức lớn:
-
-- **Thiếu giám sát real-time**: Không theo dõi được nhiệt độ/độ ẩm liên tục
-- **Mất mát hàng hóa**: 20-30% nông sản bị hỏng do điều kiện vận chuyển không phù hợp
-- **Truy xuất nguồn gốc khó khăn**: Không có hệ thống tracking toàn diện
-- **Phản ứng chậm**: Phát hiện sự cố muộn, không kịp xử lý
-
-### Mục tiêu dự án
-1. **Real-time Monitoring**: Theo dõi liên tục các chỉ số môi trường (nhiệt độ, độ ẩm, rung động)
-2. **GPS Tracking**: Xác định vị trí chính xác của xe vận chuyển mọi lúc
-3. **Alert System**: Cảnh báo tự động khi vượt ngưỡng an toàn
-4. **Analytics Dashboard**: Báo cáo và phân tích dữ liệu chi tiết
-5. **Scalability**: Hỗ trợ hàng trăm thiết bị đồng thời
-
-### Ý nghĩa cá nhân
-Dự án này giúp tôi:
-- Nắm vững **IoT architecture** và **real-time data processing**
-- Thành thạo **WebSocket** và **MQTT protocol**
-- Học cách thiết kế **scalable backend systems**
-- Hiểu sâu về **time-series data** và **database optimization**
+### Timeline
+**6 months** (June 2024 - December 2024)
 
 ---
 
-## 🛠️ Công nghệ & Kiến trúc Hệ thống
+## 💡 Context & Development Rationale
 
-### Stack công nghệ chính
+### Real-world Problems
+In agriculture and agricultural logistics, ensuring product quality during transportation presents major challenges:
+
+- **Lack of real-time monitoring**: No continuous temperature/humidity tracking
+- **Product loss**: 20-30% of agricultural products spoil due to unsuitable transport conditions
+- **Difficult traceability**: No comprehensive tracking system
+- **Slow response**: Late incident detection, insufficient time for intervention
+
+### Project Objectives
+1. **Real-time Monitoring**: Continuous tracking of environmental metrics (temperature, humidity, vibration)
+2. **GPS Tracking**: Accurate vehicle location at all times
+3. **Alert System**: Automatic warnings when safety thresholds are exceeded
+4. **Analytics Dashboard**: Detailed data reporting and analysis
+5. **Scalability**: Support hundreds of simultaneous devices
+
+### Personal Significance
+This project helped me:
+- Master **IoT architecture** and **real-time data processing**
+- Become proficient with **WebSocket** and **MQTT protocol**
+- Learn to design **scalable backend systems**
+- Gain deep understanding of **time-series data** and **database optimization**
+
+---
+
+## 🛠️ Technology & System Architecture
+
+### Core Technology Stack
 
 #### Backend Core
 - **Node.js 20.x** - Runtime environment
-- **Express 4.19** - Web framework với ES Modules
-- **Prisma 5.22** - ORM và database toolkit
+- **Express 4.19** - Web framework with ES Modules
+- **Prisma 5.22** - ORM and database toolkit
 - **PostgreSQL 15** - Relational database
 
 #### Real-time Infrastructure
-- **Socket.IO 4.8** - WebSocket server cho real-time updates
-- **MQTT (Mosquitto 2.0)** - Message broker cho IoT devices
-- **Redis** (planned) - Caching và Socket.IO scaling
+- **Socket.IO 4.8** - WebSocket server for real-time updates
+- **MQTT (Mosquitto 2.0)** - Message broker for IoT devices
+- **Redis** (planned) - Caching and Socket.IO scaling
 
 #### Security & Middleware
 - **JWT (jsonwebtoken)** - Authentication & authorization
@@ -79,7 +79,7 @@ Dự án này giúp tôi:
 - **Joi 17.x** - Input validation
 - **Nodemon** - Development hot-reload
 
-### Kiến trúc tổng quan
+### System Architecture Overview
 
 ```mermaid
 flowchart TB
@@ -228,63 +228,61 @@ erDiagram
     }
 ```
 
-### Lý do chọn công nghệ
+### Technology Selection Rationale
 
 **Node.js + Express**
-- Non-blocking I/O phù hợp với real-time applications
-- Cộng đồng lớn, ecosystem phong phú
-- ES Modules giúp code modern và dễ maintain
+- Non-blocking I/O ideal for real-time applications
+- Large community, rich ecosystem
+- ES Modules for modern, maintainable code
 
 **Prisma ORM**
 - Type-safe database queries
-- Migration system mạnh mẽ
-- Auto-generated client với IntelliSense
+- Powerful migration system
+- Auto-generated client with IntelliSense
 
 **Socket.IO**
-- Fallback tự động xuống polling khi WebSocket không khả dụng
-- Room-based subscriptions dễ quản lý
+- Automatic fallback to polling when WebSocket unavailable
+- Easy-to-manage room-based subscriptions
 - Built-in reconnection logic
 
 **MQTT**
-- Lightweight protocol, tiết kiệm bandwidth
-- Pub/Sub model phù hợp với IoT architecture
-- QoS levels đảm bảo message delivery
+- Lightweight protocol, bandwidth efficient
+- Pub/Sub model suitable for IoT architecture
+- QoS levels ensure message delivery
 
 ---
 
-## ✨ Tính năng Nổi bật
+## ✨ Key Features
 
 ### 1. Real-time Data Streaming 🔴
 
-#### Mô tả
-Hệ thống WebSocket 2-way communication cho phép frontend nhận updates tức thì khi có dữ liệu mới từ IoT devices.
+#### Description
+WebSocket 2-way communication system allows frontend to receive instant updates when new data arrives from IoT devices.
 
-#### Chi tiết kỹ thuật
-- **Socket.IO Server** với JWT authentication
-- **Room-based subscriptions**: Client chỉ nhận data từ devices mình quan tâm
+#### Technical Details
+- **Socket.IO Server** with JWT authentication
+- **Room-based subscriptions**: Clients only receive data from devices they're interested in
 - **Throttling mechanism**: 
   - Sensor readings: 2 Hz (500ms interval)
   - GPS location: 1 Hz (1000ms interval)
   - Alerts: Real-time (no throttle)
-- **SSE Fallback**: Hỗ trợ clients không dùng WebSocket
+- **SSE Fallback**: Supports clients not using WebSocket
 
-#### Lợi ích
-- Giảm 80% số lượng API calls so với polling
-- Latency trung bình < 100ms
-- Dashboard updates mượt mà, không cần refresh
+#### Benefits
+- 80% reduction in API calls compared to polling
+- Average latency < 100ms
+- Smooth dashboard updates without refresh
 
-<Callout type="info">
-**Performance Tip**: Throttling giúp giảm bandwidth usage xuống 60% mà vẫn đảm bảo data freshness
-</Callout>
+> **Performance Tip**: Throttling reduces bandwidth usage by 60% while maintaining data freshness
 
 ---
 
 ### 2. MQTT Data Ingestion Pipeline 📡
 
-#### Mô tả
-Hệ thống nhận và xử lý dữ liệu từ ESP32 devices qua MQTT protocol với validation và normalization tự động.
+#### Description
+System receives and processes data from ESP32 devices via MQTT protocol with automatic validation and normalization.
 
-#### Flow xử lý
+#### Processing Flow
 ```mermaid
 sequenceDiagram
     participant Device as ESP32 Device
@@ -316,7 +314,7 @@ sequenceDiagram
     Client->>Client: Update UI
 ```
 
-#### Payload format
+#### Payload Format
 ```json
 {
   "timestamp": "2024-12-09T10:30:00Z",
@@ -334,26 +332,26 @@ sequenceDiagram
 }
 ```
 
-#### Lợi ích
-- **Async processing**: Không block device khi lưu database
-- **Schema validation**: Reject invalid data sớm
-- **Auto normalization**: Xử lý được cả string và number types
+#### Benefits
+- **Async processing**: Doesn't block device during database save
+- **Schema validation**: Reject invalid data early
+- **Auto normalization**: Handles both string and number types
 
 ---
 
-### 3. Alert System với Auto-notification ⚠️
+### 3. Alert System with Auto-notification ⚠️
 
-#### Mô tả
-Hệ thống đánh giá real-time và gửi cảnh báo tự động khi sensor values vượt ngưỡng cấu hình.
+#### Description
+Real-time evaluation system that sends automatic alerts when sensor values exceed configured thresholds.
 
 #### Workflow
-1. **Sensor data arrives** → Kiểm tra thresholds trong database
-2. **If violated** → Tạo Alert record
-3. **Publish MQTT** → Gửi cảnh báo về device (có thể trigger buzzer/LED)
-4. **Emit WebSocket** → Push thông báo lên dashboard
-5. **Log alert** → Lưu lịch sử để phân tích sau
+1. **Sensor data arrives** → Check thresholds in database
+2. **If violated** → Create Alert record
+3. **Publish MQTT** → Send alert to device (can trigger buzzer/LED)
+4. **Emit WebSocket** → Push notification to dashboard
+5. **Log alert** → Save history for later analysis
 
-#### Cấu hình Threshold
+#### Threshold Configuration
 ```javascript
 // API: POST /device/:id/threshold
 {
@@ -363,7 +361,7 @@ Hệ thống đánh giá real-time và gửi cảnh báo tự động khi sensor
 }
 ```
 
-#### Alert payload
+#### Alert Payload
 ```json
 {
   "deviceId": "esp32-001",
@@ -374,28 +372,26 @@ Hệ thống đánh giá real-time và gửi cảnh báo tự động khi sensor
 }
 ```
 
-#### Tính năng nổi bật
-- **No throttling**: Alerts luôn được gửi ngay lập tức
-- **Bi-directional**: Cả frontend lẫn device đều nhận thông báo
-- **Historical tracking**: Toàn bộ alerts được lưu để audit
+#### Notable Features
+- **No throttling**: Alerts always sent immediately
+- **Bi-directional**: Both frontend and device receive notifications
+- **Historical tracking**: All alerts saved for auditing
 
-<Callout type="warning" title="Critical Feature">
-Alert system đã giúp giảm 40% tỷ lệ hàng hóa hỏng do phát hiện sự cố sớm
-</Callout>
+> **Critical Feature**: Alert system reduced spoilage rate by 40% through early incident detection
 
 ---
 
 ### 4. Shipment Management 📦
 
-#### Mô tả
-Quản lý toàn diện lifecycle của các chuyến hàng từ tạo mới, theo dõi, đến hoàn thành.
+#### Description
+Comprehensive management of shipment lifecycle from creation, tracking, to completion.
 
 #### Features
-- **CRUD Operations**: Tạo, đọc, cập nhật, xóa shipments
-- **Multi-device tracking**: Một shipment có thể gán nhiều devices
+- **CRUD Operations**: Create, read, update, delete shipments
+- **Multi-device tracking**: One shipment can assign multiple devices
 - **Multi-order support**: Many-to-many relationship
 - **Status workflow**: PENDING → IN_TRANSIT → DELIVERED → CANCELLED
-- **Complete tracking data**: Sensors + GPS + Alerts trong một response
+- **Complete tracking data**: Sensors + GPS + Alerts in one response
 
 #### API Example
 ```javascript
@@ -428,8 +424,8 @@ GET /shipments/:id
 
 ### 5. Analytics Dashboard APIs 📊
 
-#### Mô tả
-RESTful APIs cung cấp aggregated statistics và insights cho dashboard.
+#### Description
+RESTful APIs providing aggregated statistics and insights for dashboard.
 
 #### Endpoints
 
@@ -472,17 +468,17 @@ GET /analytics/sensors/:deviceId?type=temperature&startTime=...&endTime=...
 }
 ```
 
-#### Tối ưu hóa
-- **Indexed queries**: Composite indexes trên (deviceId, type, createdAt)
-- **Time-range filtering**: Giảm dataset cần scan
-- **Aggregation pipeline**: Xử lý trong database thay vì application code
+#### Optimization
+- **Indexed queries**: Composite indexes on (deviceId, type, createdAt)
+- **Time-range filtering**: Reduces dataset to scan
+- **Aggregation pipeline**: Processing in database instead of application code
 
 ---
 
 ### 6. Authentication & Authorization 🔐
 
-#### Mô tả
-Hệ thống bảo mật đa lớp với JWT tokens và role-based access control.
+#### Description
+Multi-layer security system with JWT tokens and role-based access control.
 
 #### Authentication Flow
 ```mermaid
@@ -520,10 +516,10 @@ sequenceDiagram
 ```
 
 #### Security Features
-- **Password hashing**: bcrypt với 10 rounds
+- **Password hashing**: bcrypt with 10 rounds
 - **Token expiration**: 7 days default
-- **Role-based access**: Admin có quyền cao hơn user
-- **Device authentication**: Devices có JWT riêng với limited scope
+- **Role-based access**: Admin has higher privileges than user
+- **Device authentication**: Devices have separate JWT with limited scope
 
 ---
 
@@ -544,71 +540,71 @@ sequenceDiagram
 #### Security Middleware
 - **Helmet.js**: Security headers (CSP, HSTS, X-Frame-Options)
 - **CORS**: Whitelist-based origin validation
-- **Input validation**: Joi schemas cho mọi request body
-- **SQL Injection protection**: Prisma ORM với parameterized queries
+- **Input validation**: Joi schemas for all request bodies
+- **SQL Injection protection**: Prisma ORM with parameterized queries
 
 ---
 
-## 📈 Kết quả & Tác động
+## 📈 Results & Impact
 
-### Metrics đạt được
+### Achieved Metrics
 
 #### Performance
-- **API Response Time**: Trung bình 45ms (p95: 89ms)
-- **WebSocket Latency**: < 100ms từ device → dashboard
-- **Throughput**: 20-25 requests/second stable
-- **Success Rate**: 98-99% (trong load testing)
+- **API Response Time**: Average 45ms (p95: 89ms)
+- **WebSocket Latency**: < 100ms from device → dashboard
+- **Throughput**: Stable 20-25 requests/second
+- **Success Rate**: 98-99% (during load testing)
 
 #### Scalability
-- **Concurrent Devices**: Tested với 200 devices đồng thời
-- **Database Size**: 10M+ sensor readings, queries vẫn < 200ms
+- **Concurrent Devices**: Tested with 200 simultaneous devices
+- **Database Size**: 10M+ sensor readings, queries still < 200ms
 - **WebSocket Connections**: 50+ concurrent clients
 
 #### Reliability
-- **Uptime**: 99.5% (trong 3 tháng testing)
-- **Data Loss Rate**: < 0.1% (do network issues)
-- **Alert Delivery**: 99.9% (alerts được gửi thành công)
+- **Uptime**: 99.5% (over 3 months of testing)
+- **Data Loss Rate**: < 0.1% (due to network issues)
+- **Alert Delivery**: 99.9% (alerts successfully delivered)
 
-### Phản hồi người dùng
+### User Feedback
 
-> "Dashboard real-time cực kỳ smooth, không bị lag như hệ thống cũ. Alerts đến rất nhanh, giúp chúng tôi xử lý sự cố kịp thời."  
-> — **Nguyễn Văn A**, Logistics Manager
+> "The real-time dashboard is extremely smooth, no lag like the old system. Alerts arrive very quickly, helping us handle incidents promptly."  
+> — **Nguyen Van A**, Logistics Manager
 
-> "API documentation rất chi tiết, integration frontend chỉ mất 2 ngày. WebSocket setup đơn giản hơn tôi nghĩ."  
-> — **Trần Thị B**, Frontend Developer
+> "API documentation is very detailed, frontend integration only took 2 days. WebSocket setup is simpler than I thought."  
+> — **Tran Thi B**, Frontend Developer
 
-### Giá trị mang lại
+### Value Delivered
 
-**Cho doanh nghiệp:**
-- Giảm **30% tỷ lệ hàng hóa hỏng** nhờ alerts sớm
-- Tăng **20% hiệu suất vận hành** với real-time tracking
-- Tiết kiệm **40% thời gian báo cáo** nhờ analytics tự động
+**For Businesses:**
+- Reduced **30% spoilage rate** through early alerts
+- Increased **20% operational efficiency** with real-time tracking
+- Saved **40% reporting time** through automated analytics
 
-**Cho developers:**
-- Codebase clean, dễ maintain và mở rộng
-- Test coverage 100% cho core services
-- Documentation đầy đủ (API Reference, Realtime Guide, Deployment)
+**For Developers:**
+- Clean, maintainable and extensible codebase
+- 100% test coverage for core services
+- Complete documentation (API Reference, Realtime Guide, Deployment)
 
-**Cho end-users:**
-- Dashboard responsive, cập nhật real-time
-- Notifications tức thì khi có sự cố
-- Lịch sử tracking đầy đủ để audit
+**For End-users:**
+- Responsive dashboard with real-time updates
+- Instant notifications on incidents
+- Complete tracking history for auditing
 
 ---
 
-## 🚧 Thách thức & Giải pháp
+## 🚧 Challenges & Solutions
 
 ### 1. Time-series Data Performance
 
-#### Vấn đề
-Ban đầu, queries lấy sensor data bị **chậm 3-5 giây** khi có > 1M records.
+#### Problem
+Initially, sensor data queries were **3-5 seconds slow** with > 1M records.
 
-#### Nguyên nhân
-- Không có indexes phù hợp
-- Full table scan khi filter theo deviceId + createdAt
-- Prisma ORM không optimize được complex time-range queries
+#### Root Cause
+- No appropriate indexes
+- Full table scan when filtering by deviceId + createdAt
+- Prisma ORM couldn't optimize complex time-range queries
 
-#### Giải pháp
+#### Solution
 1. **Composite Indexes**
    ```prisma
    model SensorReading {
@@ -618,19 +614,19 @@ Ban đầu, queries lấy sensor data bị **chậm 3-5 giây** khi có > 1M rec
    ```
 
 2. **Pagination Strategy**
-   - Limit default: 50 records
+   - Default limit: 50 records
    - Max limit: 100 records
-   - Cursor-based pagination cho datasets lớn
+   - Cursor-based pagination for large datasets
 
 3. **Query Optimization**
    ```javascript
-   // Before: Lấy tất cả rồi filter
+   // Before: Fetch all then filter
    const readings = await prisma.sensorReading.findMany({
      where: { deviceId }
    });
    // Average: 3200ms
 
-   // After: Filter và paginate trong DB
+   // After: Filter and paginate in DB
    const readings = await prisma.sensorReading.findMany({
      where: {
        deviceId,
@@ -639,27 +635,27 @@ Ban đầu, queries lấy sensor data bị **chậm 3-5 giây** khi có > 1M rec
      orderBy: { createdAt: 'desc' },
      take: 50
    });
-   // Average: 45ms (cải thiện 98%)
+   // Average: 45ms (98% improvement)
    ```
 
-#### Kết quả
-- Query time giảm từ **3200ms → 45ms**
-- Database CPU usage giảm 60%
-- Có thể scale lên 10M+ records mà vẫn < 200ms
+#### Results
+- Query time reduced from **3200ms → 45ms**
+- Database CPU usage reduced by 60%
+- Can scale to 10M+ records while staying < 200ms
 
 ---
 
 ### 2. WebSocket Bandwidth Overload
 
-#### Vấn đề
-Khi có 50+ devices gửi data mỗi giây, **frontend bị overwhelm** và UI lag.
+#### Problem
+With 50+ devices sending data every second, **frontend was overwhelmed** and UI lagged.
 
-#### Nguyên nhân
-- Mỗi device emit 3 events/giây (temp, humidity, GPS)
-- Frontend re-render chart sau mỗi event
-- Bandwidth: 50 devices × 3 events × 1KB = **150KB/giây**
+#### Root Cause
+- Each device emits 3 events/second (temp, humidity, GPS)
+- Frontend re-renders chart after each event
+- Bandwidth: 50 devices × 3 events × 1KB = **150KB/second**
 
-#### Giải pháp
+#### Solution
 1. **Server-side Throttling**
    ```javascript
    // src/utils/throttle.js
@@ -703,24 +699,24 @@ Khi có 50+ devices gửi data mỗi giây, **frontend bị overwhelm** và UI l
    }
    ```
 
-#### Kết quả
-- Bandwidth giảm **60%** (từ 150KB/s → 60KB/s)
-- Frontend FPS tăng từ 15 → 60
-- Chart vẫn smooth mà không mất data insights
+#### Results
+- Bandwidth reduced **60%** (from 150KB/s → 60KB/s)
+- Frontend FPS increased from 15 → 60
+- Chart remains smooth without losing data insights
 
 ---
 
 ### 3. MQTT Message Loss
 
-#### Vấn đề
-Trong môi trường mạng không ổn định, **5-10% messages bị mất**.
+#### Problem
+In unstable network environments, **5-10% messages were lost**.
 
-#### Nguyên nhân
-- Devices sử dụng QoS 0 (fire-and-forget)
-- Không có retry mechanism
-- Broker không persist messages
+#### Root Cause
+- Devices using QoS 0 (fire-and-forget)
+- No retry mechanism
+- Broker doesn't persist messages
 
-#### Giải pháp
+#### Solution
 1. **Enable QoS 1**
    ```javascript
    // Device code (ESP32)
@@ -744,7 +740,7 @@ Trong môi trường mạng không ổn định, **5-10% messages bị mất**.
      try {
        await processPayload(deviceId, payload);
      } catch (err) {
-       // Retry queue với exponential backoff
+       // Retry queue with exponential backoff
        retryQueue.add({ topic, message }, {
          attempts: 3,
          backoff: { type: 'exponential', delay: 2000 }
@@ -753,43 +749,43 @@ Trong môi trường mạng không ổn định, **5-10% messages bị mất**.
    });
    ```
 
-#### Kết quả
-- Message loss giảm từ **5-10% → 0.1%**
-- Data integrity tăng đáng kể
-- Có thể recover sau network outage
+#### Results
+- Message loss reduced from **5-10% → 0.1%**
+- Significant data integrity improvement
+- Can recover after network outage
 
 ---
 
 ### 4. Database Migration Downtime
 
-#### Vấn đề
-Schema migration gây **downtime 15-20 phút** trên production.
+#### Problem
+Schema migration caused **15-20 minutes downtime** in production.
 
-#### Nguyên nhân
-- Prisma migration lock toàn bộ tables
-- Phải stop backend trong khi migrate
-- Normalize schema từ monolithic `SensorData` → `SensorReading` + `DeviceLocation`
+#### Root Cause
+- Prisma migration locks entire tables
+- Must stop backend during migration
+- Normalizing schema from monolithic `SensorData` → `SensorReading` + `DeviceLocation`
 
-#### Giải pháp
+#### Solution
 1. **Blue-Green Deployment**
-   - Deploy backend version mới lên server khác
-   - Chạy migration trên copy của database
-   - Switch traffic sau khi verify
+   - Deploy new backend version to separate server
+   - Run migration on database copy
+   - Switch traffic after verification
 
 2. **Backward Compatible Migrations**
    ```sql
-   -- Step 1: Add new tables (không lock)
+   -- Step 1: Add new tables (no lock)
    CREATE TABLE SensorReading (...);
    CREATE TABLE DeviceLocation (...);
 
-   -- Step 2: Dual-write (backend ghi cả 2 tables)
+   -- Step 2: Dual-write (backend writes to both tables)
    -- Run for 1 week to verify
 
    -- Step 3: Migrate old data (background job)
    INSERT INTO SensorReading 
    SELECT ... FROM SensorData WHERE type IN ('temperature', 'humidity');
 
-   -- Step 4: Drop old table (sau khi verify)
+   -- Step 4: Drop old table (after verification)
    DROP TABLE SensorData;
    ```
 
@@ -804,26 +800,26 @@ Schema migration gây **downtime 15-20 phút** trên production.
    }
    ```
 
-#### Kết quả
-- Downtime giảm từ **15 phút → 0 phút** (zero-downtime migration)
-- Rollback dễ dàng nếu có issues
-- Production traffic không bị ảnh hưởng
+#### Results
+- Downtime reduced from **15 minutes → 0 minutes** (zero-downtime migration)
+- Easy rollback if issues occur
+- Production traffic unaffected
 
 ---
 
-## 💪 Bài học & Phát triển Cá nhân
+## 💪 Lessons Learned & Personal Growth
 
-### Kỹ năng kỹ thuật học được
+### Technical Skills Acquired
 
 #### 1. Real-time Architecture
-- **Before**: Chỉ biết REST APIs với request-response pattern
-- **After**: Nắm vững WebSocket, MQTT, Server-Sent Events
-- **Key Takeaway**: Chọn protocol phù hợp với use case (HTTP vs WebSocket vs MQTT)
+- **Before**: Only knew REST APIs with request-response pattern
+- **After**: Mastered WebSocket, MQTT, Server-Sent Events
+- **Key Takeaway**: Choose appropriate protocol for use case (HTTP vs WebSocket vs MQTT)
 
 #### 2. Time-series Database Optimization
-- Học cách thiết kế indexes cho time-based queries
-- Hiểu rõ trade-offs giữa normalization và query performance
-- Biết khi nào nên denormalize để tăng tốc
+- Learned to design indexes for time-based queries
+- Understood trade-offs between normalization and query performance
+- Know when to denormalize for speed
 
 #### 3. IoT System Design
 - **MQTT protocol**: QoS levels, topic patterns, message persistence
@@ -832,42 +828,37 @@ Schema migration gây **downtime 15-20 phút** trên production.
 
 #### 4. Scalability & Performance
 - **Throttling strategies**: Server-side vs client-side
-- **Connection pooling**: Database và WebSocket
-- **Horizontal scaling**: Redis adapter cho Socket.IO
+- **Connection pooling**: Database and WebSocket
+- **Horizontal scaling**: Redis adapter for Socket.IO
 
-### Kỹ năng mềm phát triển
+### Soft Skills Development
 
-#### 1. System Thinking
-Học cách nhìn hệ thống từ góc độ tổng quan:
+#### 1. Systems Thinking
+Learned to view systems from a holistic perspective:
 - **Trade-offs**: Latency vs throughput, consistency vs availability
 - **Failure scenarios**: Network partition, device offline, database down
 - **Monitoring**: Metrics, alerts, dashboards
 
 #### 2. Documentation
-Viết documentation đầy đủ giúp:
-- Team onboarding nhanh hơn 3x
-- Giảm 80% câu hỏi trùng lặp
-- Frontend integration dễ dàng hơn
+Comprehensive documentation helps:
+- Team onboarding 3x faster
+- 80% reduction in duplicate questions
+- Easier frontend integration
 
 #### 3. Testing Mindset
-- Viết test scripts trước khi deploy
-- Load testing để tìm bottlenecks
+- Write test scripts before deployment
+- Load testing to find bottlenecks
 - Chaos engineering (simulating failures)
 
-### Insight quan trọng nhất
+### Most Important Insight
 
-<Callout type="success">
-**"Premature optimization is the root of all evil, but monitoring is the root of all performance improvements."**
+> **"Premature optimization is the root of all evil, but monitoring is the root of all performance improvements."**
+>
+> Instead of optimizing from the start, I:
+> 1. Shipped MVP quickly
+> 2. Setup monitoring & metrics
+> 3. Discovered actual bottlenecks
+> 4. Optimized based on data
+>
+> Result: Focused effort on real problems, 10x performance improvement without over-engineering.
 
-Thay vì optimize ngay từ đầu, tôi đã:
-1. Ship MVP nhanh
-2. Setup monitoring & metrics
-3. Phát hiện bottlenecks thực tế
-4. Optimize dựa trên data
-
-Kết quả: Focus effort vào đúng vấn đề, performance tăng 10x mà không over-engineer.
-</Callout>
-
----
-
-## 🖼️ Demo Trực quan

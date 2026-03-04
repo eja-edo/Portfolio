@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 type Season = 'spring' | 'summer' | 'autumn' | 'winter';
 
@@ -16,6 +17,12 @@ interface Particle {
 }
 
 export function SeasonalEffect() {
+    const pathname = usePathname();
+
+    const isProjectsRoute = pathname === '/projects' || pathname.startsWith('/projects/');
+
+    if (isProjectsRoute) return null;
+
     const [season, setSeason] = useState<Season>('winter');
     const [particles, setParticles] = useState<Particle[]>([]);
     const [isEnabled, setIsEnabled] = useState(true);

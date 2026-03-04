@@ -12,71 +12,71 @@ status: "completed"
 duration: "3 months"
 ---
 
-# 🎯 Giới thiệu Dự án
+# 🎯 Project Overview
 
-**IT English Hub** là một nền tảng học tiếng Anh thông minh được thiết kế đặc biệt cho các chuyên gia IT tại Việt Nam. Dự án giải quyết bài toán thực tế: làm thế nào để người làm IT có thể giao tiếp tiếng Anh tự tin và chuyên nghiệp trong môi trường làm việc quốc tế.
+**IT English Hub** is an intelligent English learning platform specifically designed for IT professionals in Vietnam. The project addresses a real-world challenge: how can IT professionals communicate confidently and professionally in English within international work environments.
 
-Với sự hỗ trợ của Google Gemini AI, ứng dụng tạo ra các bài học được cá nhân hóa theo từng vai trò công việc, từ Developer, Designer đến Project Manager. Người học không chỉ học từ vựng mà còn thực hành qua các tình huống thực tế như daily standup, code review, hoặc thuyết trình kỹ thuật.
+Powered by Google Gemini AI, the application creates personalized lessons tailored to each job role, from Developer and Designer to Project Manager. Learners not only study vocabulary but also practice through real-world scenarios such as daily standups, code reviews, or technical presentations.
 
-**Vai trò của tôi:** Full-stack Developer và AI Integration Specialist
+**My Role:** Full-stack Developer and AI Integration Specialist
 
-**Thời gian thực hiện:** 3 tháng (Sep 2024 - Nov 2024)
+**Timeline:** 3 months (Sep 2024 - Nov 2024)
 
-## 💡 Bối cảnh & Lý do Phát triển
+## 💡 Context & Development Rationale
 
-### Vấn đề thực tế
+### Real-world Problem
 
-Trong quá trình làm việc tại các công ty công nghệ, tôi nhận thấy nhiều đồng nghiệp gặp khó khăn khi giao tiếp bằng tiếng Anh, đặc biệt là:
+During my work at technology companies, I noticed many colleagues struggling with English communication, particularly:
 
-- **Thiếu tự tin** khi họp với khách hàng quốc tế hoặc đội ngũ offshore
-- **Không biết cách diễn đạt** các vấn đề kỹ thuật một cách chuyên nghiệp
-- **Học tiếng Anh tổng quát** không phù hợp với ngữ cảnh IT thực tế
-- **Thiếu cơ hội thực hành** trong môi trường an toàn, không lo bị đánh giá
+- **Lack of confidence** when meeting with international clients or offshore teams
+- **Unable to articulate** technical issues professionally
+- **General English learning** doesn't fit real IT contexts
+- **Lack of practice opportunities** in a safe environment without fear of judgment
 
-### Mục tiêu dự án
+### Project Objectives
 
-1. Tạo ra một công cụ học tập thực tế, tập trung vào các tình huống giao tiếp hàng ngày trong IT
-2. Cá nhân hóa nội dung học theo từng vai trò công việc cụ thể
-3. Cung cấp phản hồi tức thì và chi tiết từ AI để người học tiến bộ nhanh chóng
-4. Xây dựng môi trường thực hành an toàn với AI chatbot
+1. Create a practical learning tool focused on daily communication scenarios in IT
+2. Personalize learning content based on specific job roles
+3. Provide instant and detailed feedback from AI to accelerate learning progress
+4. Build a safe practice environment with an AI chatbot
 
-### Ý nghĩa cá nhân
+### Personal Significance
 
-Dự án này xuất phát từ trải nghiệm bản thân khi tôi từng lúng túng trong các cuộc họp tiếng Anh đầu tiên. Tôi muốn tạo ra một công cụ mà bản thân mình và đồng nghiệp có thể sử dụng hàng ngày để cải thiện kỹ năng giao tiếp một cách tự nhiên và hiệu quả.
+This project stemmed from my personal experience when I struggled during my first English meetings. I wanted to create a tool that I and my colleagues could use daily to improve communication skills naturally and effectively.
 
-## 🛠️ Công nghệ & Kiến trúc Hệ thống
+## 🛠️ Technology & System Architecture
 
-### Stack công nghệ chính
+### Core Technology Stack
 
 **Frontend Framework:**
-- React 19.2.0 với TypeScript cho type safety
-- Vite build tool cho development experience nhanh chóng
-- TailwindCSS cho responsive UI hiện đại
+- React 19.2.0 with TypeScript for type safety
+- Vite build tool for rapid development experience
+- TailwindCSS for modern responsive UI
 
 **AI & ML:**
-- Google Gemini 2.5 Pro cho content generation chất lượng cao
-- Gemini 2.0 Flash cho real-time interactions
-- Gemini 2.5 Flash TTS cho text-to-speech tự nhiên
+- Google Gemini 2.5 Pro for high-quality content generation
+- Gemini 2.0 Flash for real-time interactions
+- Gemini 2.5 Flash TTS for natural text-to-speech
 
 **APIs & Services:**
-- Web Speech API cho speech recognition
-- Web Audio API cho audio playback
+- Web Speech API for speech recognition
+- Web Audio API for audio playback
 - Google GenAI SDK (@google/genai v1.25.0)
 
-### Lý do chọn công nghệ
+### Technology Selection Rationale
 
-**React + TypeScript:** Đảm bảo code maintainable và scale được khi thêm features mới. TypeScript giúp catch lỗi sớm trong quá trình development.
+**React + TypeScript:** Ensures maintainable code that scales when adding new features. TypeScript helps catch errors early during development.
 
-**Vite:** Hot Module Replacement (HMR) cực nhanh giúp tăng productivity. Build time giảm 10x so với Create React App truyền thống.
+**Vite:** Extremely fast Hot Module Replacement (HMR) increases productivity. Build time reduced 10x compared to traditional Create React App.
 
-**Gemini AI Multi-Model Strategy:** Thay vì dùng một model cho tất cả, tôi tối ưu chi phí và performance bằng cách:
-- `gemini-2.5-pro` cho lesson generation (cần chất lượng cao)
-- `gemini-2.0-flash-lite` cho UI interactions (cần tốc độ)
-- `gemini-2.5-flash` cho chatbot (cân bằng tốc độ và chất lượng)
+**Gemini AI Multi-Model Strategy:** Instead of using one model for everything, I optimized cost and performance by:
+- `gemini-2.5-pro` for lesson generation (requires high quality)
+- `gemini-2.0-flash-lite` for UI interactions (requires speed)
+- `gemini-2.5-flash` for chatbot (balances speed and quality)
 
-**TailwindCSS:** Utility-first approach giúp prototype nhanh và maintain UI consistency dễ dàng.
+**TailwindCSS:** Utility-first approach enables rapid prototyping and easy UI consistency maintenance.
 
-### Kiến trúc tổng quan
+### Architecture Overview
 
 ```mermaid
 graph TB
@@ -119,60 +119,60 @@ graph TB
     style APIs fill:#1e293b
 ```
 
-**Luồng hoạt động chính:**
+**Main Workflow:**
 
-1. User chọn vai trò công việc → Generate topics động từ Gemini
-2. Chọn topic → Gemini 2.5 Pro tạo lesson structure hoàn chỉnh
-3. Interactive exercises → Gemini 2.0 Flash xử lý nhanh các bài tập
-4. Live conversation → Gemini 2.5 Flash làm AI chatbot "Alex"
+1. User selects job role → Dynamically generate topics from Gemini
+2. Select topic → Gemini 2.5 Pro creates complete lesson structure
+3. Interactive exercises → Gemini 2.0 Flash processes exercises quickly
+4. Live conversation → Gemini 2.5 Flash acts as AI chatbot "Alex"
 5. Pronunciation practice → Web Speech API + Gemini feedback
 6. Audio playback → Gemini TTS + Web Audio API
 
-## ✨ Tính năng Nổi bật
+## ✨ Key Features
 
-### 1. Dynamic Topic Generation theo Vai trò
+### 1. Dynamic Topic Generation by Role
 
-Người dùng nhập vai trò công việc, AI tự động generate 6 topics phù hợp. Ví dụ:
+Users enter their job role, AI automatically generates 6 relevant topics. Examples:
 - **IT Professional:** "IT Meeting Discussions", "Writing Work Report Emails"
 - **Accountant:** "Financial Reporting", "Tax Compliance Conversations"
 - **Product Manager:** "Stakeholder Management", "Product Roadmap Presentations"
 
-**Công nghệ:** Debounced API calls (1s delay) để tránh spam requests khi user đang gõ.
+**Technology:** Debounced API calls (1s delay) to avoid spam requests while user is typing.
 
-### 2. Interactive Phrase Learning với 6 Exercise Types
+### 2. Interactive Phrase Learning with 6 Exercise Types
 
-Mỗi phrase đều có 6 bài tập tương tác:
+Each phrase has 6 interactive exercises:
 
-**Speaking Practice:** Record giọng nói, AI đánh giá pronunciation và grammar (0-10 scale)
+**Speaking Practice:** Record voice, AI evaluates pronunciation and grammar (0-10 scale)
 
-**Fill in the Blank:** Cloze exercises với 4 options, test vocabulary comprehension
+**Fill in the Blank:** Cloze exercises with 4 options, testing vocabulary comprehension
 
-**Sentence Scramble:** Sắp xếp từ thành câu hoàn chỉnh, train sentence structure
+**Sentence Scramble:** Arrange words into complete sentences, training sentence structure
 
-**Multiple Choice:** Comprehension questions test ngữ cảnh sử dụng
+**Multiple Choice:** Comprehension questions testing usage context
 
-**Translation Challenge:** Dịch từ tiếng Việt sang tiếng Anh, AI feedback chi tiết
+**Translation Challenge:** Translate from Vietnamese to English, detailed AI feedback
 
-**Personalization:** Tạo câu riêng của bạn dựa trên phrase gốc
+**Personalization:** Create your own sentences based on the original phrase
 
-### 3. Live Conversation với AI "Alex"
+### 3. Live Conversation with AI "Alex"
 
-AI chatbot đóng vai đồng nghiệp, tạo môi trường thực hành an toàn:
-- Hỏi đáp tự nhiên về work topics
-- Implicit grammar correction (không chỉ ra lỗi trực tiếp)
-- Encourage sử dụng các phrases đã học
-- Speech-to-text integration cho thực hành nói
+AI chatbot plays the role of a colleague, creating a safe practice environment:
+- Natural Q&A about work topics
+- Implicit grammar correction (doesn't directly point out errors)
+- Encourages use of learned phrases
+- Speech-to-text integration for speaking practice
 
-**Kỹ thuật:** History-aware conversations với full context được gửi mỗi turn để chatbot nhớ toàn bộ cuộc trò chuyện.
+**Technique:** History-aware conversations with full context sent each turn so chatbot remembers the entire conversation.
 
-### 4. Text-to-Speech với Gemini TTS
+### 4. Text-to-Speech with Gemini TTS
 
 - Natural American English accent
-- Phát âm chuẩn mọi phrase và dialogue
-- Web Audio API cho playback mượt mà
-- Base64 audio decoding real-time
+- Standard pronunciation for every phrase and dialogue
+- Web Audio API for smooth playback
+- Real-time base64 audio decoding
 
-### 5. Speech Recognition cho Pronunciation Practice
+### 5. Speech Recognition for Pronunciation Practice
 
 - Browser-native Web Speech API
 - Real-time transcript display
@@ -181,78 +181,78 @@ AI chatbot đóng vai đồng nghiệp, tạo môi trường thực hành an to�
 
 ### 6. Favorites System
 
-- Save phrases yêu thích để review sau
+- Save favorite phrases for later review
 - Local state management
-- Quick access từ navigation bar
+- Quick access from navigation bar
 
-## 📊 Kết quả & Tác động
+## 📊 Results & Impact
 
-### Metrics đo lường
+### Measured Metrics
 
 **User Engagement:**
-- Thời gian thực hành trung bình: **25-30 phút/session**
-- Completion rate bài tập: **78%** (cao hơn đáng kể so với app học tiếng Anh truyền thống ~40%)
-- Users quay lại sau 7 ngày: **65%**
+- Average practice time: **25-30 minutes/session**
+- Exercise completion rate: **78%** (significantly higher than traditional language learning apps ~40%)
+- Users returning after 7 days: **65%**
 
 **AI Performance:**
-- Lesson generation time: **8-12 giây** (acceptable cho quality nhận được)
-- Exercise generation: **2-3 giây** (fast enough cho smooth UX)
-- Chatbot response latency: **1-2 giây** (conversational)
+- Lesson generation time: **8-12 seconds** (acceptable for quality received)
+- Exercise generation: **2-3 seconds** (fast enough for smooth UX)
+- Chatbot response latency: **1-2 seconds** (conversational)
 
 **Quality Metrics:**
-- User satisfaction với AI feedback: **4.3/5**
+- User satisfaction with AI feedback: **4.3/5**
 - Phrase relevance rating: **4.5/5**
 - Speech recognition accuracy: **85-90%** (dependent on mic quality)
 
-### Phản hồi người dùng
+### User Feedback
 
-**"Đây là app học tiếng Anh IT đầu tiên mà tôi thấy thực sự practical. Các phrase đều là những gì tôi cần dùng hàng ngày trong standup và code review."** - Backend Developer, 3 năm kinh nghiệm
+**"This is the first IT English learning app I've found truly practical. All phrases are exactly what I need daily in standups and code reviews."** - Backend Developer, 3 years experience
 
-**"AI feedback rất chi tiết và constructive. Tôi cảm thấy tự tin hơn nhiều khi viết email cho client nước ngoài."** - Frontend Developer
+**"AI feedback is very detailed and constructive. I feel much more confident writing emails to foreign clients."** - Frontend Developer
 
-**"Tính năng conversation practice rất hay! Cảm giác như đang chat với đồng nghiệp thật, không bị pressure như nói chuyện với người thật."** - Junior Developer
+**"The conversation practice feature is excellent! It feels like chatting with a real colleague, without the pressure of talking to actual people."** - Junior Developer
 
-### Giá trị mang lại
+### Value Delivered
 
-**Cho cá nhân người học:**
-- Tăng tự tin giao tiếp tiếng Anh trong môi trường IT
-- Học được phrases và vocabulary thực tế, ngay lập tức apply được vào công việc
-- Có môi trường safe để practice mà không sợ bị judge
+**For Individual Learners:**
+- Increased confidence in English communication within IT environments
+- Learned practical phrases and vocabulary that can be immediately applied at work
+- Safe environment to practice without fear of judgment
 
-**Cho doanh nghiệp:**
-- Nhân viên giao tiếp hiệu quả hơn với đối tác quốc tế
-- Giảm communication gaps trong distributed teams
-- Tiết kiệm chi phí đào tạo tiếng Anh truyền thống
+**For Businesses:**
+- Employees communicate more effectively with international partners
+- Reduced communication gaps in distributed teams
+- Saved costs on traditional English training
 
-**Về mặt kỹ thuật:**
-- Proof-of-concept thành công cho việc integrate multiple AI models
-- Reusable architecture cho các EdTech products khác
-- Optimal cost structure với multi-model strategy
+**Technical Perspective:**
+- Successful proof-of-concept for integrating multiple AI models
+- Reusable architecture for other EdTech products
+- Optimal cost structure with multi-model strategy
 
-## 🚧 Thách thức & Giải pháp
+## 🚧 Challenges & Solutions
 
 ### 1. Web Speech API Browser Compatibility
 
-**Vấn đề:** Web Speech API không hoạt động trên Safari và một số trình duyệt mobile. User trên iOS không thể dùng tính năng speech recognition.
+**Problem:** Web Speech API doesn't work on Safari and some mobile browsers. iOS users couldn't use speech recognition feature.
 
-**Giải pháp:**
-- Implement graceful fallback: hiển thị message rõ ràng khi feature không available
-- Add keyboard input alternative cho mọi speaking exercise
-- Detect browser capabilities on mount và disable microphone button nếu không support
-- Document browser requirements rõ ràng trong README
+**Solution:**
+- Implement graceful fallback: display clear message when feature not available
+- Add keyboard input alternative for all speaking exercises
+- Detect browser capabilities on mount and disable microphone button if not supported
+- Document browser requirements clearly in README
 
-**Kết quả:** 95% users trên Chrome/Edge có thể dùng đầy đủ features. Users còn lại vẫn complete được exercises qua keyboard input.
+**Result:** 95% of users on Chrome/Edge can use full features. Remaining users can still complete exercises via keyboard input.
 
 ### 2. AI Response Quality & Consistency
 
-**Vấn đề:** Đầu tiên tôi dùng một model cho tất cả tasks, dẫn đến:
-- Lesson generation đôi khi thiếu chi tiết hoặc không consistent format
-- Exercise generation trả về invalid JSON
-- Chatbot responses đôi khi quá dài hoặc off-topic
+**Problem:** Initially using one model for all tasks led to:
+- Lesson generation sometimes lacking detail or inconsistent format
+- Exercise generation returning invalid JSON
+- Chatbot responses sometimes too long or off-topic
 
-**Giải pháp:**
+**Solution:**
 
-**Structured Output với JSON Schema:**
+**Structured Output with JSON Schema:**
 ```javascript
 const lessonSchema = {
   type: Type.OBJECT,
@@ -266,26 +266,26 @@ const lessonSchema = {
 ```
 
 **Multi-Model Strategy:**
-- Gemini 2.5 Pro cho complex content generation
-- Gemini 2.0 Flash Lite cho simple, high-frequency tasks
-- Gemini 2.5 Flash cho balanced performance
+- Gemini 2.5 Pro for complex content generation
+- Gemini 2.0 Flash Lite for simple, high-frequency tasks
+- Gemini 2.5 Flash for balanced performance
 
 **Detailed Prompt Engineering:**
 - Clear role definition: "Act as an expert instructional designer..."
 - Explicit output format requirements
-- Examples và constraints trong prompt
-- System instructions cho chatbot personality
+- Examples and constraints in prompt
+- System instructions for chatbot personality
 
-**Kết quả:** JSON parse success rate tăng từ 70% lên 98%. Response quality consistency cải thiện đáng kể.
+**Result:** JSON parse success rate increased from 70% to 98%. Response quality consistency significantly improved.
 
 ### 3. Audio Playback Performance
 
-**Vấn đề:** Gemini TTS trả về base64 audio format không standard. Decode và play audio gặp nhiều issues:
-- Ánh chỉ empty hoặc corrupted
+**Problem:** Gemini TTS returns non-standard base64 audio format. Decoding and playing audio encountered many issues:
+- Audio sometimes empty or corrupted
 - Playback stuttering
 - Browser compatibility issues
 
-**Giải pháp:**
+**Solution:**
 
 **Custom Audio Decoding Pipeline:**
 ```javascript
@@ -305,188 +305,186 @@ const audioBuffer = await decodeAudioData(
 - Proper cleanup on unmount
 
 **Error Handling:**
-- Try-catch cho mọi audio operations
-- Fallback message khi audio fails
-- Loading states cho better UX
+- Try-catch for all audio operations
+- Fallback message when audio fails
+- Loading states for better UX
 
-**Kết quả:** Audio playback success rate 95%+, smooth playback experience trên Chrome và Edge.
+**Result:** Audio playback success rate 95%+, smooth playback experience on Chrome and Edge.
 
 ### 4. API Rate Limiting & Cost Management
 
-**Vấn đề:** Gemini API có rate limits và mỗi request có cost. Users spam clicking có thể trigger rate limit hoặc tăng chi phí đáng kể.
+**Problem:** Gemini API has rate limits and each request has a cost. Users spam clicking could trigger rate limits or significantly increase costs.
 
-**Giải pháp:**
+**Solution:**
 
 **Debounced Requests:**
-- Topic generation: 1s debounce trên job title input
+- Topic generation: 1s debounce on job title input
 - Disable buttons during loading
-- Show loading spinners rõ ràng
+- Show clear loading spinners
 
 **Request Optimization:**
-- Cache exercise data trong component state
-- Chỉ generate khi thực sự cần
-- Batch multiple questions trong một API call khi có thể
+- Cache exercise data in component state
+- Only generate when truly needed
+- Batch multiple questions in one API call when possible
 
 **Model Selection Strategy:**
-- Dùng cheapest model (2.0 Flash Lite) cho simple tasks
-- Reserve expensive model (2.5 Pro) cho critical quality tasks
+- Use cheapest model (2.0 Flash Lite) for simple tasks
+- Reserve expensive model (2.5 Pro) for critical quality tasks
 
-**Kết quả:** Average cost per user session giảm 40%, no rate limit issues trong production use.
+**Result:** Average cost per user session reduced 40%, no rate limit issues in production use.
 
-## 💪 Bài học & Phát triển Cá nhân
+## 💪 Lessons Learned & Personal Growth
 
-### Kỹ năng kỹ thuật học được
+### Technical Skills Acquired
 
 **AI Integration & Prompt Engineering:**
-- Hiểu rõ cách chọn AI model phù hợp cho từng task type
-- Master structured output với JSON schemas
+- Deeply understand how to choose appropriate AI model for each task type
+- Master structured output with JSON schemas
 - Prompt engineering techniques: role definition, few-shot examples, constraints
-- Debugging AI responses và handling edge cases
+- Debugging AI responses and handling edge cases
 
 **React Performance Optimization:**
-- `useCallback` và `useMemo` để tránh unnecessary re-renders
-- Component composition patterns cho reusable code
-- Custom hooks cho complex logic encapsulation
-- State management strategies cho large forms và multi-step flows
+- `useCallback` and `useMemo` to avoid unnecessary re-renders
+- Component composition patterns for reusable code
+- Custom hooks for complex logic encapsulation
+- State management strategies for large forms and multi-step flows
 
 **Browser APIs:**
-- Web Speech API implementation và cross-browser handling
-- Web Audio API cho complex audio processing
+- Web Speech API implementation and cross-browser handling
+- Web Audio API for complex audio processing
 - Permission handling (microphone access)
 - Browser feature detection
 
 **TypeScript Best Practices:**
-- Interface design cho complex data structures
-- Type safety trong async operations
-- Generic types cho reusable components
-- Proper typing cho third-party APIs
+- Interface design for complex data structures
+- Type safety in async operations
+- Generic types for reusable components
+- Proper typing for third-party APIs
 
-### Kỹ năng mềm phát triển
+### Soft Skills Development
 
 **Product Thinking:**
-- Học cách đặt mình vào vị trí end user để design features
-- Balance giữa feature richness và simplicity
+- Learned to put myself in end user's shoes to design features
+- Balance between feature richness and simplicity
 - MVP mindset: ship core value first, iterate later
 
 **Problem Solving:**
-- Break down complex problems thành smaller, manageable pieces
-- Research và evaluate multiple solutions trước khi implement
-- Not afraid to pivot khi solution ban đầu không work
+- Break down complex problems into smaller, manageable pieces
+- Research and evaluate multiple solutions before implementing
+- Not afraid to pivot when initial solution doesn't work
 
 **Documentation:**
 - Write clear, maintainable code comments
-- Document technical decisions và tradeoffs
+- Document technical decisions and tradeoffs
 - Create user-facing documentation (README, guides)
 
 ### Key Learnings
 
 **1. AI is not magic - it needs careful engineering**
 
-Ban đầu tôi nghĩ chỉ cần call AI API là xong. Reality: cần extensive prompt engineering, error handling, và fallback strategies để có stable product.
+Initially I thought just calling AI API would be enough. Reality: extensive prompt engineering, error handling, and fallback strategies are needed for a stable product.
 
 **2. User experience > Technical complexity**
 
-Có features technical impressive nhưng nếu UX không smooth thì users sẽ không dùng. Tôi học được cách prioritize UX details như loading states, error messages, và smooth transitions.
+Having technically impressive features doesn't matter if UX isn't smooth - users won't use them. I learned to prioritize UX details like loading states, error messages, and smooth transitions.
 
 **3. Performance matters from day one**
 
-Đừng để đến khi app chậm mới optimize. Từ đầu đã implement debouncing, memoization, và proper state management giúp app scale tốt hơn nhiều.
+Don't wait until the app is slow to optimize. Implementing debouncing, memoization, and proper state management from the start helps the app scale much better.
 
 **4. Real user feedback is gold**
 
-Features tôi nghĩ users sẽ thích nhất (như expansion tips) lại ít được dùng. Ngược lại, conversation practice - tính năng tôi gần bỏ vì sợ phức tạp - lại là most loved feature. Lesson: ship fast, get feedback, iterate.
+Features I thought users would like most (like expansion tips) were rarely used. Conversely, conversation practice - a feature I almost dropped for fear of complexity - became the most loved feature. Lesson: ship fast, get feedback, iterate.
 
-## 🖼️ Demo Trực quan
+## 🖼️ Visual Demo
 
-### Trang chủ - Topic Selection
-Giao diện clean với job title customization và topic cards responsive.
+### Homepage - Topic Selection
+Clean interface with job title customization and responsive topic cards.
 
 ![Topic Selection View](/assets/projects/it-english-hub.png)
 
 ### Interactive Lesson View
-6-step exercise progression với visual feedback và score tracking.
+6-step exercise progression with visual feedback and score tracking.
 ![Interactive Lesson View](/assets/projects/interactive-lesson.png)
+
 ### AI Conversation Practice
-Real-time chat với AI "Alex", speech-to-text integration, natural conversation flow.
+Real-time chat with AI "Alex", speech-to-text integration, natural conversation flow.
 ![AI Conversation View](/assets/projects/ai-conversation.png)
+
 ### Favorites Dashboard
-Quick access đến saved phrases cho review và practice.
+Quick access to saved phrases for review and practice.
 
 **Live Demo:** [IT English Hub on AI Studio](https://ai.studio/apps/drive/1PWw6OiK_1DimiIv72KzL7lwQfmdUTciX)
 
-## 🚀 Kế hoạch Tương lai
+## 🚀 Future Plans
 
-### Tính năng ngắn hạn (1-3 tháng)
+### Short-term Features (1-3 months)
 
 **Spaced Repetition System:**
-- Implement algorithm để remind users review phrases theo khoa học
-- Track retention rate và adjust review schedule
-- Gamification với streak counts
+- Implement algorithm to remind users to review phrases scientifically
+- Track retention rate and adjust review schedule
+- Gamification with streak counts
 
 **More Exercise Types:**
 - Dictation exercises
-- Pronunciation comparison với native speakers
+- Pronunciation comparison with native speakers
 - Pair work simulations (user + AI playing 2 roles)
 
 **Mobile App:**
-- React Native version cho iOS và Android
-- Offline mode với cached lessons
-- Push notifications cho daily practice reminders
+- React Native version for iOS and Android
+- Offline mode with cached lessons
+- Push notifications for daily practice reminders
 
-### Tính năng dài hạn (3-6 tháng)
+### Long-term Features (3-6 months)
 
 **Company/Team Features:**
-- Admin dashboard cho quản lý team learning
-- Custom topic creation cho specific company needs
-- Team leaderboards và competitions
-- Analytics dashboard cho HR/managers
+- Admin dashboard for managing team learning
+- Custom topic creation for specific company needs
+- Team leaderboards and competitions
+- Analytics dashboard for HR/managers
 
 **Advanced AI Features:**
 - Video analysis: upload presentation videos, get feedback
 - Meeting transcript analysis: identify communication improvement areas
 - Personalized learning path based on proficiency level
-- AI tutor với persistent memory về learning history
+- AI tutor with persistent memory of learning history
 
 **Gamification & Social:**
-- Achievement badges và XP system
-- Community forum để users share experiences
+- Achievement badges and XP system
+- Community forum for users to share experiences
 - Live multiplayer exercises
-- Weekly challenges với prizes
+- Weekly challenges with prizes
 
-### Cải thiện kỹ thuật
+### Technical Improvements
 
 **Performance:**
-- Implement proper caching layer (React Query hoặc SWR)
-- Service Worker cho offline capabilities
-- Lazy loading cho components và routes
-- Image optimization với next/image hoặc similar
+- Implement proper caching layer (React Query or SWR)
+- Service Worker for offline capabilities
+- Lazy loading for components and routes
+- Image optimization with next/image or similar
 
 **Testing:**
-- Unit tests cho critical business logic
-- Integration tests cho AI service layer
-- E2E tests với Playwright
+- Unit tests for critical business logic
+- Integration tests for AI service layer
+- E2E tests with Playwright
 - Accessibility testing (a11y)
 
 **Infrastructure:**
-- Deploy lên cloud platform (Vercel, Netlify)
+- Deploy to cloud platform (Vercel, Netlify)
 - Set up CI/CD pipeline
-- Monitoring với Sentry hoặc LogRocket
-- Analytics với Google Analytics hoặc Mixpanel
+- Monitoring with Sentry or LogRocket
+- Analytics with Google Analytics or Mixpanel
 
 **Security:**
-- Move API keys ra server-side (backend API)
+- Move API keys to server-side (backend API)
 - Implement rate limiting per user
-- Add authentication (Firebase Auth hoặc Auth0)
-- GDPR compliance cho user data
+- Add authentication (Firebase Auth or Auth0)
+- GDPR compliance for user data
 
 ---
 
-## 📝 Kết luận
+## 📝 Conclusion
 
-IT English Hub là một journey đầy thử thách và học hỏi. Từ một ý tưởng đơn giản "làm app học tiếng Anh cho IT" đến một product hoàn chỉnh với AI integration phức tạp, tôi đã học được rất nhiều về full-stack development, AI engineering, và product thinking.
+IT English Hub has been a journey full of challenges and learning. From a simple idea of "making an English learning app for IT" to a complete product with complex AI integration, I've learned tremendously about full-stack development, AI engineering, and product thinking.
 
-Quan trọng nhất, dự án này giải quyết được một real problem mà tôi và nhiều đồng nghiệp đang gặp phải. Seeing users actually benefit từ app mình build là động lực lớn nhất để tiếp tục develop và improve product.
-
----
-
-*Nếu bạn là IT professional đang muốn cải thiện English communication skills, hãy thử IT English Hub! Feedback và suggestions luôn được welcome. 🚀*
+Most importantly, this project solves a real problem that I and many colleagues face. Seeing users actually benefit from the app I built is the greatest motivation to continue developing and improving the product.

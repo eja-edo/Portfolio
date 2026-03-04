@@ -7,9 +7,9 @@ export const SITE: SiteConfig = {
     role: 'Backend / Full-Stack Engineer',
 
     bio: [
-        'Full-Stack Engineer định hướng Backend, DevOps và Application Security, với trọng tâm xây dựng các hệ thống real-time, IoT và AI-powered ở quy mô production. Có kinh nghiệm thiết kế kiến trúc scalable, fault-tolerant và self-hosted, tối ưu hiệu năng, chi phí và khả năng mở rộng.',
-        'Thành thạo thiết kế RESTful API và real-time communication (WebSocket, MQTT, WebRTC). Có kinh nghiệm triển khai và vận hành hệ thống production với Docker, Nginx và Linux, tối ưu hạ tầng giúp giảm đến ~90% chi phí so với các giải pháp cloud managed.',
-        'Hiện tập trung vào Application Security & Pentesting cho Web Application và Blockchain, nghiên cứu và khai thác các lỗ hổng liên quan đến business logic, authentication/authorization, API security, file handling và smart contract. Thực hành threat modeling, phân tích trust boundary và đánh giá rủi ro trong các hệ thống phân tán.'
+        'Full-Stack Engineer oriented toward Backend, DevOps, and Application Security, with a strong focus on building production-scale real-time, IoT, and AI-powered systems. Experienced in designing scalable, fault-tolerant, and self-hosted architectures, optimizing performance, cost efficiency, and system scalability.',
+        'Proficient in designing RESTful APIs and implementing real-time communication technologies (WebSocket, MQTT, WebRTC). Experienced in deploying and operating production systems using Docker, Nginx, and Linux, optimizing infrastructure to reduce costs by up to ~90% compared to managed cloud solutions.',
+        'Currently focusing on Application Security & Pentesting for Web Applications and Blockchain systems, researching and exploiting vulnerabilities related to business logic, authentication/authorization, API security, file handling, and smart contracts. Practicing threat modeling, trust boundary analysis, and risk assessment in distributed systems.'
     ],
 
     avatar: 'https://imgproxy.mezon.ai/K0YUZRIosDOcz5lY6qrgC6UIXmQgWzLjZv7VJ1RAA8c/rs:fit:300:300:1/mb:2097152/plain/https://profile.mezon.ai/1946168514767228928/2009178101203865600.jpg@webp',
@@ -62,46 +62,46 @@ export const SITE: SiteConfig = {
     // Timeline - Học vấn & Kinh nghiệm
     timeline: [
         {
-            title: 'Application Security & Blockchain Pentester',
-            organization: 'Independent / Research',
-            period: 'Dec 2024 - Present',
-            description: 'Thực hiện pentest Web Application và Blockchain: phân tích trust boundary, business logic flaws, API security, file upload, auth flows và smart contract vulnerabilities. Thực hành threat modeling và exploit PoC trong môi trường thực tế.',
-            type: 'work',
-        },
-        {
-            title: 'Backend Developer – Real-time Systems',
-            organization: 'Mezon AI',
-            period: 'Sep 2024 - Nov 2024',
-            description: 'Thiết kế Real-Time Transcription Agent với LiveKit (WebRTC, SFU). Tích hợp WhisperLive/Vosk STT, Silero TTS, triển khai self-hosted giúp giảm ~90% chi phí vận hành so với cloud.',
-            type: 'work',
-        },
-        {
-            title: 'Full-Stack Developer – IoT Systems',
-            organization: 'Farm Trace Project',
-            period: 'Jun 2024 - Dec 2024',
-            description: 'Xây dựng IoT supply chain backend với Node.js, Prisma, PostgreSQL. Tích hợp MQTT cho ESP32 và Socket.IO cho real-time monitoring, JWT auth và rate limiting.',
-            type: 'work',
-        },
-        {
-            title: 'Backend Engineer – Streaming Platform',
-            organization: 'SMovie',
-            period: 'Aug 2024 - Oct 2024',
-            description: 'Phát triển nền tảng streaming với Django REST, WebSocket comments, OAuth, fuzzy search và admin dashboard reporting.',
-            type: 'work',
-        },
-        {
-            title: 'Full-Stack Developer – AI Learning Platform',
-            organization: 'IT English Hub',
-            period: 'Sep 2024 - Nov 2024',
-            description: 'Xây dựng nền tảng học tiếng Anh ứng dụng Gemini AI với chiến lược multi-model để tối ưu chi phí và hiệu năng.',
-            type: 'work',
-        },
-        {
-            title: 'Bachelor of Computer Science',
-            organization: 'University of Technology',
-            period: '2020 - 2024',
-            description: 'Tập trung Backend, Distributed Systems và Software Architecture. Hoàn thành nhiều dự án production-ready.',
+            title: 'Bachelor of Information Technology',
+            organization: 'Electric Power University (Faculty of Information Technology)',
+            period: '2022 - 2027',
+            description: 'Focused on Backend Engineering, Distributed Systems, and Software Architecture. Actively involved in building production-oriented systems and AI-integrated applications.',
             type: 'education',
+        },
+        {
+            title: 'Full-Stack Developer – AI Learning Systems',
+            organization: 'Independent Project',
+            period: '2023 - 2024',
+            description: 'Developed AI-powered learning platforms leveraging multiple AI models. Designed multi-model strategies to optimize performance, cost efficiency, and response quality.',
+            type: 'work',
+        },
+        {
+            title: 'Backend Engineer – Streaming Platform (SMovie)',
+            organization: 'SMovie',
+            period: '2024',
+            description: 'Designed and developed a movie streaming platform with scalable backend architecture, real-time WebSocket comments, OAuth authentication, fuzzy search, and reporting dashboard.',
+            type: 'work',
+        },
+        {
+            title: 'Full-Stack Developer – IoT Supply Chain System',
+            organization: 'Farm Trace Project',
+            period: '2024',
+            description: 'Built an IoT-based supply chain backend using Node.js, Prisma, and PostgreSQL. Integrated MQTT for ESP32 devices and Socket.IO for real-time monitoring. Implemented JWT authentication and rate limiting.',
+            type: 'work',
+        },
+        {
+            title: 'Backend Engineer – Agent LiveKit (Real-time STT Systems)',
+            organization: 'Mezon AI / Independent Research',
+            period: '2025 - Present',
+            description: 'Designed and developed real-time Speech-to-Text systems using LiveKit (WebRTC, SFU). Integrated Whisper/Vosk-based STT and optimized for low-latency streaming. Later expanded the system with a high-accuracy STT pipeline and introduced an orchestrator layer to coordinate LiveKit, applications, and Mezon bots.',
+            type: 'work',
+        },
+        {
+            title: 'Application Security & Blockchain Pentester',
+            organization: 'Independent Research',
+            period: '2025 - Present',
+            description: 'Conducting Web Application and Blockchain penetration testing, focusing on trust boundaries, business logic flaws, authentication/authorization issues, API security, file handling vulnerabilities, and smart contract exploits. Practicing threat modeling and real-world PoC development.',
+            type: 'work',
         },
     ],
 };

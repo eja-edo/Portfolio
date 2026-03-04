@@ -75,7 +75,7 @@ export default function AboutPage() {
                 <p>
                   <span className="font-medium">Email:</span>{' '}
                   <a
-                    href={`mailto:${SITE.email}`}
+                    href={`${SITE.social.email}`}
                     className="text-primary-600 dark:text-primary-400 hover:underline"
                   >
                     {SITE.email}

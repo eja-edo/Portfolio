@@ -61,7 +61,7 @@ export default function ContactPage() {
                       Email
                     </h3>
                     <a
-                      href={`mailto:${SITE.email}`}
+                      href={`${SITE.social.email}`}
                       className="text-primary-600 dark:text-primary-400 hover:underline"
                     >
                       {SITE.email}
@@ -76,10 +76,10 @@ export default function ContactPage() {
                   Availability
                 </h3>
                 <p className={`font-medium ${SITE.experience.status === 'available'
-                    ? 'text-green-600 dark:text-green-400'
-                    : SITE.experience.status === 'contracted'
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400'
+                  ? 'text-green-600 dark:text-green-400'
+                  : SITE.experience.status === 'contracted'
+                    ? 'text-blue-600 dark:text-blue-400'
+                    : 'text-gray-600 dark:text-gray-400'
                   }`}>
                   {SITE.experience.status === 'available' && 'Currently available for new projects'}
                   {SITE.experience.status === 'contracted' && 'Currently under contract'}
@@ -121,7 +121,7 @@ export default function ContactPage() {
             </h2>
 
             <form
-              action={`mailto:${SITE.email}`}
+              action={`${SITE.social.email}`}
               method="get"
               encType="text/plain"
               className="space-y-6"
