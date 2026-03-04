@@ -3,7 +3,7 @@ title: "Architect MultiClient Server — Real-Time Voice AI Platform"
 date: "2025-01-01"
 tags: ["Python", "FastAPI", "LiveKit", "Vosk", "Whisper", "MongoDB", "WebSocket", "Docker", "MinIO", "Kokoro TTS"]
 thumb:
-  - "/assets/projects/architect-multiclient-thumb.jpg"
+  - "/assets/projects/agent_livekit.png"
 demo: ""
 repo: ""
 excerpt: "A production-grade, multi-service platform for real-time voice transcription, speech-to-text, and text-to-speech — built on LiveKit with per-client inference pipelines, async queuing, and AI-powered meeting summarization."
@@ -16,7 +16,9 @@ duration: "6+ months"
 # Architect MultiClient Server — Real-Time Voice AI Platform
 
 A scalable, microservice-based backend platform that processes real-time audio streams from LiveKit rooms, transcribes speech using Vosk and Whisper, synthesizes spoken responses with Kokoro TTS, and automatically generates AI-powered conversation summaries using Google Gemini.
-
+<Callout type="info">
+🔗 **Live demo will be available soon.** Stay tuned for updates.
+</Callout>
 ---
 
 ## 🎯 Project Overview
